@@ -1156,6 +1156,18 @@ function $isArrayOf_Lmonix_execution_cancelables_SingleAssignCancelable$State(ob
 function $asArrayOf_Lmonix_execution_cancelables_SingleAssignCancelable$State(obj, depth) {
   return (($isArrayOf_Lmonix_execution_cancelables_SingleAssignCancelable$State(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmonix.execution.cancelables.SingleAssignCancelable$State;", depth))
 }
+function $is_Loutwatch_Sink(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_Sink)))
+}
+function $as_Loutwatch_Sink(obj) {
+  return (($is_Loutwatch_Sink(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "outwatch.Sink"))
+}
+function $isArrayOf_Loutwatch_Sink(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Loutwatch_Sink)))
+}
+function $asArrayOf_Loutwatch_Sink(obj, depth) {
+  return (($isArrayOf_Loutwatch_Sink(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.Sink;", depth))
+}
 function $is_Loutwatch_dom_VDomModifier$und(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_dom_VDomModifier$und)))
 }
@@ -1243,7 +1255,7 @@ function $f_Loutwatch_dom_helpers_SnabbdomAttributes__toSnabbdom__T3($thiz) {
   while ((!these$1.isEmpty__Z())) {
     var arg1$2 = these$1.head__O();
     var p = $as_Loutwatch_dom_Prop(arg1$2);
-    propsDict[p.title$1] = p.value$1;
+    propsDict[p.title__T()] = p.value__O();
     these$1 = $as_sci_List(these$1.tail__O())
   };
   var this$7 = $as_Loutwatch_dom_helpers_SeparatedAttributes($thiz).styles$1;
@@ -1260,7 +1272,7 @@ function $f_Loutwatch_dom_helpers_SnabbdomEmitters__outwatch$dom$helpers$Snabbdo
   emitters$1.foreach__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, event$1) {
     return (function(x$14$2) {
       var x$14 = $as_Loutwatch_dom_Emitter(x$14$2);
-      return $as_s_concurrent_Future(x$14.trigger__F1().apply__O__O(event$1))
+      return $as_s_concurrent_Future(x$14.trigger$1.apply__O__O(event$1))
     })
   })($thiz, event)))
 }
@@ -1272,7 +1284,7 @@ function $f_Loutwatch_dom_helpers_SnabbdomEmitters__toSnabbdom__sjs_js_Dictionar
   while ((!these.isEmpty__Z())) {
     var arg1 = these.head__O();
     var x$15 = $as_Loutwatch_dom_Emitter(arg1);
-    var key = x$15.eventType__T();
+    var key = x$15.eventType$1;
     var hash = $m_sr_Statics$().anyHash__O__I(key);
     var i = $f_scm_HashTable__index__I__I(m, hash);
     var entry = m.findEntry__p5__O__I__scm_DefaultEntry(key, i);
@@ -1706,8 +1718,8 @@ function $f_Loutwatch_dom_helpers_SnabbdomStyles__toSnabbdom__sjs_js_Dictionary(
     var x0$1 = $as_Loutwatch_dom_Style(arg1);
     if ($is_Loutwatch_dom_BasicStyle(x0$1)) {
       var x2 = $as_Loutwatch_dom_BasicStyle(x0$1);
-      var jsx$1 = x2.title__T();
-      var a = x2.value__T();
+      var jsx$1 = x2.title$1;
+      var a = x2.value$1;
       styleDict[jsx$1] = a
     } else if ($is_Loutwatch_dom_DelayedStyle(x0$1)) {
       var x3 = $as_Loutwatch_dom_DelayedStyle(x0$1);
@@ -3033,6 +3045,477 @@ function $m_Lcats_effect_internals_NonFatal$() {
   };
   return $n_Lcats_effect_internals_NonFatal$
 }
+/** @constructor */
+function $c_Lcom_raquo_domtypes_generic_keys_Key() {
+  $c_O.call(this)
+}
+$c_Lcom_raquo_domtypes_generic_keys_Key.prototype = new $h_O();
+$c_Lcom_raquo_domtypes_generic_keys_Key.prototype.constructor = $c_Lcom_raquo_domtypes_generic_keys_Key;
+/** @constructor */
+function $h_Lcom_raquo_domtypes_generic_keys_Key() {
+  /*<skip>*/
+}
+$h_Lcom_raquo_domtypes_generic_keys_Key.prototype = $c_Lcom_raquo_domtypes_generic_keys_Key.prototype;
+/** @constructor */
+function $c_Ldailytours_DailyTours$() {
+  $c_O.call(this);
+  this.tags$1 = null
+}
+$c_Ldailytours_DailyTours$.prototype = new $h_O();
+$c_Ldailytours_DailyTours$.prototype.constructor = $c_Ldailytours_DailyTours$;
+/** @constructor */
+function $h_Ldailytours_DailyTours$() {
+  /*<skip>*/
+}
+$h_Ldailytours_DailyTours$.prototype = $c_Ldailytours_DailyTours$.prototype;
+$c_Ldailytours_DailyTours$.prototype.init___ = (function() {
+  $n_Ldailytours_DailyTours$ = this;
+  $m_sci_List$();
+  var array = ["hipster", "religious", "basketball", "theater", "music avenues"];
+  var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
+  var this$4 = $m_sci_List$();
+  var cbf = this$4.ReusableCBFInstance$2;
+  this.tags$1 = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs, cbf));
+  return this
+});
+$c_Ldailytours_DailyTours$.prototype.apply__Lcats_effect_IO = (function() {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.div__Lcats_effect_IO();
+  var jsx$12 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  var this$3 = $m_Loutwatch_dom_dsl$();
+  var this$4 = this$3.styleAttr__Loutwatch_dom_helpers_AttributeBuilder();
+  var jsx$11 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$4, "display: flex");
+  var this$6 = $m_Loutwatch_dom_package$();
+  var this$5 = $m_Loutwatch_dom_dsl$();
+  var vnode$1 = this$5.div__Lcats_effect_IO();
+  var jsx$10 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$6, vnode$1);
+  var this$7 = $m_Loutwatch_dom_dsl$();
+  var this$8 = this$7.id__Loutwatch_dom_helpers_ValueBuilder();
+  var jsx$9 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$8, "tags");
+  $m_Loutwatch_dom_package$();
+  var this$19 = this.tags$1;
+  var f = (function($this) {
+    return (function(tag$2) {
+      var tag = $as_T(tag$2);
+      var this$10 = $m_Loutwatch_dom_package$();
+      var this$9 = $m_Loutwatch_dom_dsl$();
+      var vnode$2 = this$9.div__Lcats_effect_IO();
+      var jsx$7 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$10, vnode$2);
+      var this$12 = $m_Loutwatch_dom_package$();
+      var this$11 = $m_Loutwatch_dom_dsl$();
+      var vnode$3 = this$11.button__Lcats_effect_IO();
+      var jsx$6 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$12, vnode$3);
+      $m_Loutwatch_dom_package$();
+      var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
+      var array = [mr.asModifier__T__Lcats_effect_IO(tag)];
+      var array$1 = [jsx$6.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array))];
+      return jsx$7.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1))
+    })
+  })(this);
+  var this$18 = $m_sci_List$();
+  var bf = this$18.ReusableCBFInstance$2;
+  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
+    if ((this$19 === $m_sci_Nil$())) {
+      var jsx$8 = $m_sci_Nil$()
+    } else {
+      var arg1 = this$19.head__O();
+      var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
+      var t = h;
+      var rest = $as_sci_List(this$19.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        var arg1$1 = rest.head__O();
+        var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
+        t.tl$5 = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      var jsx$8 = h
+    }
+  } else {
+    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$19, bf);
+    var these = this$19;
+    while ((!these.isEmpty__Z())) {
+      var arg1$2 = these.head__O();
+      b.$$plus$eq__O__scm_Builder(f(arg1$2));
+      these = $as_sci_List(these.tail__O())
+    };
+    var jsx$8 = b.result__O()
+  };
+  var modifiers = $as_sc_Seq(jsx$8);
+  var array$2 = [jsx$9, $m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
+  var jsx$5 = jsx$10.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2));
+  var this$24 = $m_Loutwatch_dom_package$();
+  var this$23 = $m_Loutwatch_dom_dsl$();
+  var vnode$4 = this$23.div__Lcats_effect_IO();
+  var jsx$4 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$24, vnode$4);
+  var this$26 = $m_Loutwatch_dom_package$();
+  var this$25 = $m_Loutwatch_dom_dsl$();
+  var vnode$5 = this$25.button__Lcats_effect_IO();
+  var jsx$3 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$26, vnode$5);
+  $m_Loutwatch_dom_package$();
+  var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array$3 = [mr$1.asModifier__T__Lcats_effect_IO("next")];
+  var array$4 = [jsx$3.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3))];
+  var jsx$2 = jsx$4.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$4));
+  var this$33 = $m_Loutwatch_dom_package$();
+  var this$32 = $m_Loutwatch_dom_dsl$();
+  var vnode$6 = this$32.div__Lcats_effect_IO();
+  var jsx$1 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$33, vnode$6);
+  var array$5 = [$m_Ldailytours_ProposedTours$().apply__Lcats_effect_IO()];
+  var array$6 = [jsx$11, jsx$5, jsx$2, jsx$1.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$5))];
+  return jsx$12.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$6))
+});
+var $d_Ldailytours_DailyTours$ = new $TypeData().initClass({
+  Ldailytours_DailyTours$: 0
+}, false, "dailytours.DailyTours$", {
+  Ldailytours_DailyTours$: 1,
+  O: 1
+});
+$c_Ldailytours_DailyTours$.prototype.$classData = $d_Ldailytours_DailyTours$;
+var $n_Ldailytours_DailyTours$ = (void 0);
+function $m_Ldailytours_DailyTours$() {
+  if ((!$n_Ldailytours_DailyTours$)) {
+    $n_Ldailytours_DailyTours$ = new $c_Ldailytours_DailyTours$().init___()
+  };
+  return $n_Ldailytours_DailyTours$
+}
+/** @constructor */
+function $c_Ldailytours_ProposedTours$() {
+  $c_O.call(this)
+}
+$c_Ldailytours_ProposedTours$.prototype = new $h_O();
+$c_Ldailytours_ProposedTours$.prototype.constructor = $c_Ldailytours_ProposedTours$;
+/** @constructor */
+function $h_Ldailytours_ProposedTours$() {
+  /*<skip>*/
+}
+$h_Ldailytours_ProposedTours$.prototype = $c_Ldailytours_ProposedTours$.prototype;
+$c_Ldailytours_ProposedTours$.prototype.init___ = (function() {
+  return this
+});
+$c_Ldailytours_ProposedTours$.prototype.apply__Lcats_effect_IO = (function() {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.div__Lcats_effect_IO();
+  var jsx$2 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  $m_Loutwatch_dom_package$();
+  var this$4 = $m_Ldailytours_Tours$().all$1;
+  var f = (function($this) {
+    return (function(tour$2) {
+      var tour = $as_Ldailytours_Tour(tour$2);
+      return $m_Ldailytours_ProposedTours$().view__Ldailytours_Tour__Lcats_effect_IO(tour)
+    })
+  })(this);
+  var this$3 = $m_sci_List$();
+  var bf = this$3.ReusableCBFInstance$2;
+  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
+    if ((this$4 === $m_sci_Nil$())) {
+      var jsx$1 = $m_sci_Nil$()
+    } else {
+      var arg1 = this$4.head__O();
+      var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
+      var t = h;
+      var rest = $as_sci_List(this$4.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        var arg1$1 = rest.head__O();
+        var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
+        t.tl$5 = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      var jsx$1 = h
+    }
+  } else {
+    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$4, bf);
+    var these = this$4;
+    while ((!these.isEmpty__Z())) {
+      var arg1$2 = these.head__O();
+      b.$$plus$eq__O__scm_Builder(f(arg1$2));
+      these = $as_sci_List(these.tail__O())
+    };
+    var jsx$1 = b.result__O()
+  };
+  var modifiers = $as_sc_Seq(jsx$1);
+  var array = [$m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
+  return jsx$2.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array))
+});
+$c_Ldailytours_ProposedTours$.prototype.view__Ldailytours_Author__Lcats_effect_IO = (function(author) {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.div__Lcats_effect_IO();
+  var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  var this$4 = $m_Loutwatch_dom_package$();
+  var this$3 = $m_Loutwatch_dom_dsl$();
+  var vnode$1 = this$3.h2__Lcats_effect_IO();
+  var jsx$4 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$4, vnode$1);
+  $m_Loutwatch_dom_package$();
+  var value = author.name$1;
+  var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array = [mr.asModifier__T__Lcats_effect_IO(value)];
+  var jsx$3 = jsx$4.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array));
+  var this$9 = $m_Loutwatch_dom_package$();
+  var this$8 = $m_Loutwatch_dom_dsl$();
+  var vnode$2 = this$8.img__Lcats_effect_IO();
+  var jsx$2 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$9, vnode$2);
+  var this$10 = $m_Loutwatch_dom_dsl$();
+  var this$11 = this$10.src__Loutwatch_dom_helpers_ValueBuilder();
+  var value$1 = author.imageUrl$1;
+  var jsx$1 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$11, value$1);
+  $m_Loutwatch_dom_package$();
+  var style = $m_Loutwatch_dom_dsl$().width__Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle();
+  var this$13 = new $c_Loutwatch_dom_helpers_BasicStyleBuilder().init___T(style.cssName$2);
+  var array$1 = [jsx$1, $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$13, "50px")];
+  var array$2 = [jsx$3, jsx$2.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1))];
+  return jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2))
+});
+$c_Ldailytours_ProposedTours$.prototype.view__Ldailytours_Event__Lcats_effect_IO = (function(event) {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.div__Lcats_effect_IO();
+  var jsx$9 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  var this$4 = $m_Loutwatch_dom_package$();
+  var this$3 = $m_Loutwatch_dom_dsl$();
+  var vnode$1 = this$3.h2__Lcats_effect_IO();
+  var jsx$8 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$4, vnode$1);
+  $m_Loutwatch_dom_package$();
+  var value = event.name$1;
+  var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array = [mr.asModifier__T__Lcats_effect_IO(value)];
+  var jsx$7 = jsx$8.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array));
+  $m_Loutwatch_dom_package$();
+  var value$1 = ("At: " + event.place$1.name$1);
+  var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var jsx$6 = mr$1.asModifier__T__Lcats_effect_IO(value$1);
+  var this$10 = $m_Loutwatch_dom_package$();
+  var this$9 = $m_Loutwatch_dom_dsl$();
+  var vnode$2 = this$9.img__Lcats_effect_IO();
+  var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$10, vnode$2);
+  var this$11 = $m_Loutwatch_dom_dsl$();
+  var this$13 = this$11.src__Loutwatch_dom_helpers_ValueBuilder();
+  var this$12 = event.place$1.imageUrl$1;
+  var value$2 = (this$12.isEmpty__Z() ? "" : this$12.get__O());
+  var jsx$4 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$13, value$2);
+  $m_Loutwatch_dom_package$();
+  var style = $m_Loutwatch_dom_dsl$().width__Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle();
+  var this$15 = new $c_Loutwatch_dom_helpers_BasicStyleBuilder().init___T(style.cssName$2);
+  var array$1 = [jsx$4, $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$15, "100%")];
+  var jsx$3 = jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1));
+  $m_Loutwatch_dom_package$();
+  var this$24 = event.place$1.tags$1;
+  var f = (function(this$2$1) {
+    return (function(tag$2) {
+      var tag = $as_T(tag$2);
+      var this$19 = $m_Loutwatch_dom_package$();
+      var this$18 = $m_Loutwatch_dom_dsl$();
+      var vnode$3 = this$18.button__Lcats_effect_IO();
+      var jsx$1 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$19, vnode$3);
+      $m_Loutwatch_dom_package$();
+      var mr$2 = $m_Loutwatch_ValueModifier$StringRenderer$();
+      var array$2 = [mr$2.asModifier__T__Lcats_effect_IO(tag)];
+      return jsx$1.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2))
+    })
+  })(this);
+  var this$23 = $m_sci_List$();
+  var bf = this$23.ReusableCBFInstance$2;
+  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
+    if ((this$24 === $m_sci_Nil$())) {
+      var jsx$2 = $m_sci_Nil$()
+    } else {
+      var arg1 = this$24.head__O();
+      var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
+      var t = h;
+      var rest = $as_sci_List(this$24.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        var arg1$1 = rest.head__O();
+        var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
+        t.tl$5 = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      var jsx$2 = h
+    }
+  } else {
+    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$24, bf);
+    var these = this$24;
+    while ((!these.isEmpty__Z())) {
+      var arg1$2 = these.head__O();
+      b.$$plus$eq__O__scm_Builder(f(arg1$2));
+      these = $as_sci_List(these.tail__O())
+    };
+    var jsx$2 = b.result__O()
+  };
+  var modifiers = $as_sc_Seq(jsx$2);
+  var array$3 = [jsx$7, jsx$6, jsx$3, $m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
+  return jsx$9.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3))
+});
+$c_Ldailytours_ProposedTours$.prototype.view__Ldailytours_Tour__Lcats_effect_IO = (function(tour) {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.div__Lcats_effect_IO();
+  var jsx$8 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  var this$3 = $m_Loutwatch_dom_dsl$();
+  var this$4 = this$3.styleAttr__Loutwatch_dom_helpers_AttributeBuilder();
+  var jsx$7 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$4, "display: flex; flex-direction: row");
+  var this$6 = $m_Loutwatch_dom_package$();
+  var this$5 = $m_Loutwatch_dom_dsl$();
+  var vnode$1 = this$5.div__Lcats_effect_IO();
+  var jsx$6 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$6, vnode$1);
+  var this$8 = $m_Loutwatch_dom_package$();
+  var this$7 = $m_Loutwatch_dom_dsl$();
+  var vnode$2 = this$7.h2__Lcats_effect_IO();
+  var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$8, vnode$2);
+  $m_Loutwatch_dom_package$();
+  var value = tour.name$1;
+  var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array = [mr.asModifier__T__Lcats_effect_IO(value)];
+  var array$1 = [jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array)), this.view__Ldailytours_Author__Lcats_effect_IO(tour.author$1)];
+  var jsx$4 = jsx$6.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1));
+  var this$15 = $m_Loutwatch_dom_package$();
+  var this$14 = $m_Loutwatch_dom_dsl$();
+  var vnode$3 = this$14.div__Lcats_effect_IO();
+  var jsx$3 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$15, vnode$3);
+  var this$16 = $m_Loutwatch_dom_dsl$();
+  var this$17 = this$16.styleAttr__Loutwatch_dom_helpers_AttributeBuilder();
+  var jsx$2 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$17, "display: flex; flex-direction: row");
+  $m_Loutwatch_dom_package$();
+  var this$19 = tour.events$1;
+  var f = (function($this) {
+    return (function(event$2) {
+      var event = $as_Ldailytours_Event(event$2);
+      return $m_Ldailytours_ProposedTours$().view__Ldailytours_Event__Lcats_effect_IO(event)
+    })
+  })(this);
+  var this$18 = $m_sci_List$();
+  var bf = this$18.ReusableCBFInstance$2;
+  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
+    if ((this$19 === $m_sci_Nil$())) {
+      var jsx$1 = $m_sci_Nil$()
+    } else {
+      var arg1 = this$19.head__O();
+      var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
+      var t = h;
+      var rest = $as_sci_List(this$19.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        var arg1$1 = rest.head__O();
+        var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
+        t.tl$5 = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      var jsx$1 = h
+    }
+  } else {
+    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$19, bf);
+    var these = this$19;
+    while ((!these.isEmpty__Z())) {
+      var arg1$2 = these.head__O();
+      b.$$plus$eq__O__scm_Builder(f(arg1$2));
+      these = $as_sci_List(these.tail__O())
+    };
+    var jsx$1 = b.result__O()
+  };
+  var modifiers = $as_sc_Seq(jsx$1);
+  var array$2 = [jsx$2, $m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
+  var array$3 = [jsx$7, jsx$4, jsx$3.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2))];
+  return jsx$8.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3))
+});
+var $d_Ldailytours_ProposedTours$ = new $TypeData().initClass({
+  Ldailytours_ProposedTours$: 0
+}, false, "dailytours.ProposedTours$", {
+  Ldailytours_ProposedTours$: 1,
+  O: 1
+});
+$c_Ldailytours_ProposedTours$.prototype.$classData = $d_Ldailytours_ProposedTours$;
+var $n_Ldailytours_ProposedTours$ = (void 0);
+function $m_Ldailytours_ProposedTours$() {
+  if ((!$n_Ldailytours_ProposedTours$)) {
+    $n_Ldailytours_ProposedTours$ = new $c_Ldailytours_ProposedTours$().init___()
+  };
+  return $n_Ldailytours_ProposedTours$
+}
+/** @constructor */
+function $c_Ldailytours_Tours$() {
+  $c_O.call(this);
+  this.toni$1 = null;
+  this.all$1 = null
+}
+$c_Ldailytours_Tours$.prototype = new $h_O();
+$c_Ldailytours_Tours$.prototype.constructor = $c_Ldailytours_Tours$;
+/** @constructor */
+function $h_Ldailytours_Tours$() {
+  /*<skip>*/
+}
+$h_Ldailytours_Tours$.prototype = $c_Ldailytours_Tours$.prototype;
+$c_Ldailytours_Tours$.prototype.init___ = (function() {
+  $n_Ldailytours_Tours$ = this;
+  this.toni$1 = new $c_Ldailytours_Author().init___T__T("Antonio Lang", "//images.duckduckgo.com/iu/?u=http%3A%2F%2Fcache1.asset-cache.net%2Fgc%2F167973780-antonio-lang-of-the-cleveland-cavaliers-gettyimages.jpg%3Fv%3D1%26c%3DIWSAsset%26k%3D2%26d%3DGkZZ8bf5zL1ZiijUmxa7QUciUcSIqmAIRvU7NWNWi961OWsFONYhhQtOEF3NF63RmmB%252fmOz59VmW8C10n5E844auTF%252f8AHQvpIYbbqbON%252fh30slMCXWRx4%252foBH0bZ9vA&f=1");
+  $m_sci_List$();
+  $m_sci_List$();
+  var jsx$9 = new $c_s_Some().init___O("//images.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.swiss.com%2FCMSContent%2Fexplore%2FSiteCollectionImages%2FZagreb%2Feat-and-drink%2Fbar-sedmica.jpg&f=1");
+  $m_sci_List$();
+  var array = ["chill out", "coffee"];
+  var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
+  var this$4 = $m_sci_List$();
+  var cbf = this$4.ReusableCBFInstance$2;
+  var jsx$8 = new $c_Ldailytours_Event().init___T__Ldailytours_Place("morning coffee", new $c_Ldailytours_Place().init___T__s_Option__sci_List("sedmica", jsx$9, $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs, cbf))));
+  var jsx$7 = new $c_s_Some().init___O("//images.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fb0%2FBritanski_trg_Zagreb.jpg%2F1200px-Britanski_trg_Zagreb.jpg&f=1");
+  $m_sci_List$();
+  var array$1 = ["market", "antiques", "clothes"];
+  var xs$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1);
+  var this$8 = $m_sci_List$();
+  var cbf$1 = this$8.ReusableCBFInstance$2;
+  var jsx$6 = new $c_Ldailytours_Event().init___T__Ldailytours_Place("local free market", new $c_Ldailytours_Place().init___T__s_Option__sci_List("britanac", jsx$7, $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$1, cbf$1))));
+  var jsx$5 = new $c_s_Some().init___O("//images.duckduckgo.com/iu/?u=https%3A%2F%2Firs3.4sqi.net%2Fimg%2Fgeneral%2F600x600%2FkwHK6Njlz0Y4B6He-vYQSHOyHD2ktecpq_v36p76cjs.jpg&f=1");
+  $m_sci_List$();
+  var array$2 = ["pizza", "italiac cuisine"];
+  var xs$2 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2);
+  var this$12 = $m_sci_List$();
+  var cbf$2 = this$12.ReusableCBFInstance$2;
+  var array$3 = [jsx$8, jsx$6, new $c_Ldailytours_Event().init___T__Ldailytours_Place("lunch", new $c_Ldailytours_Place().init___T__s_Option__sci_List("nocturno", jsx$5, $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$2, cbf$2))))];
+  var xs$3 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3);
+  var this$16 = $m_sci_List$();
+  var cbf$3 = this$16.ReusableCBFInstance$2;
+  var jsx$4 = new $c_Ldailytours_Tour().init___T__sci_List__Ldailytours_Author("toni tour", $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$3, cbf$3)), this.toni$1);
+  $m_sci_List$();
+  var jsx$3 = new $c_s_Some().init___O("//images.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.croatiaweek.com%2Fwp-content%2Fuploads%2F2018%2F05%2F1-5.jpg&f=1");
+  $m_sci_List$();
+  var array$4 = ["art", "outdoors", "music"];
+  var xs$4 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$4);
+  var this$20 = $m_sci_List$();
+  var cbf$4 = this$20.ReusableCBFInstance$2;
+  var jsx$2 = new $c_Ldailytours_Event().init___T__Ldailytours_Place("afternoon art walk", new $c_Ldailytours_Place().init___T__s_Option__sci_List("art park zagreb", jsx$3, $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$4, cbf$4))));
+  var jsx$1 = new $c_s_Some().init___O("https://www.cibona.com/cibona/usdadocs/Cibona-Zagreb-A1-023.jpg");
+  $m_sci_List$();
+  var array$5 = ["basketball", "competition"];
+  var xs$5 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$5);
+  var this$24 = $m_sci_List$();
+  var cbf$5 = this$24.ReusableCBFInstance$2;
+  var array$6 = [jsx$2, new $c_Ldailytours_Event().init___T__Ldailytours_Place("basketball evening", new $c_Ldailytours_Place().init___T__s_Option__sci_List("cibona", jsx$1, $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$5, cbf$5))))];
+  var xs$6 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$6);
+  var this$28 = $m_sci_List$();
+  var cbf$6 = this$28.ReusableCBFInstance$2;
+  var array$7 = [jsx$4, new $c_Ldailytours_Tour().init___T__sci_List__Ldailytours_Author("filips tour", $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$6, cbf$6)), this.toni$1)];
+  var xs$7 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$7);
+  var this$32 = $m_sci_List$();
+  var cbf$7 = this$32.ReusableCBFInstance$2;
+  this.all$1 = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$7, cbf$7));
+  return this
+});
+var $d_Ldailytours_Tours$ = new $TypeData().initClass({
+  Ldailytours_Tours$: 0
+}, false, "dailytours.Tours$", {
+  Ldailytours_Tours$: 1,
+  O: 1
+});
+$c_Ldailytours_Tours$.prototype.$classData = $d_Ldailytours_Tours$;
+var $n_Ldailytours_Tours$ = (void 0);
+function $m_Ldailytours_Tours$() {
+  if ((!$n_Ldailytours_Tours$)) {
+    $n_Ldailytours_Tours$ = new $c_Ldailytours_Tours$().init___()
+  };
+  return $n_Ldailytours_Tours$
+}
 function $is_Ljava_io_Closeable(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Ljava_io_Closeable)))
 }
@@ -3377,9 +3860,6 @@ $c_Lmonix_execution_schedulers_Timer$.prototype.setTimeout__J__jl_Runnable__Lmon
   })(this, r, reporter);
   return $g.setTimeout(lambda, $m_sjsr_RuntimeLong$().scala$scalajs$runtime$RuntimeLong$$toDouble__I__I__D(delayMillis.lo$2, delayMillis.hi$2))
 });
-$c_Lmonix_execution_schedulers_Timer$.prototype.clearTimeout__sjs_js_Dynamic__sjs_js_Dynamic = (function(task) {
-  return $g.clearTimeout(task)
-});
 var $d_Lmonix_execution_schedulers_Timer$ = new $TypeData().initClass({
   Lmonix_execution_schedulers_Timer$: 0
 }, false, "monix.execution.schedulers.Timer$", {
@@ -3509,14 +3989,166 @@ var $d_Lmonix_reactive_internal_util_PromiseCounter = new $TypeData().initClass(
 });
 $c_Lmonix_reactive_internal_util_PromiseCounter.prototype.$classData = $d_Lmonix_reactive_internal_util_PromiseCounter;
 /** @constructor */
+function $c_Lologwebsite_Avatars$() {
+  $c_O.call(this)
+}
+$c_Lologwebsite_Avatars$.prototype = new $h_O();
+$c_Lologwebsite_Avatars$.prototype.constructor = $c_Lologwebsite_Avatars$;
+/** @constructor */
+function $h_Lologwebsite_Avatars$() {
+  /*<skip>*/
+}
+$h_Lologwebsite_Avatars$.prototype = $c_Lologwebsite_Avatars$.prototype;
+$c_Lologwebsite_Avatars$.prototype.init___ = (function() {
+  return this
+});
+$c_Lologwebsite_Avatars$.prototype.apply__Lcats_effect_IO = (function() {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.div__Lcats_effect_IO();
+  var jsx$9 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  var this$4 = $m_Loutwatch_dom_package$();
+  var this$3 = $m_Loutwatch_dom_dsl$();
+  var vnode$1 = this$3.h2__Lcats_effect_IO();
+  var jsx$8 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$4, vnode$1);
+  $m_Loutwatch_dom_package$();
+  var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array = [mr.asModifier__T__Lcats_effect_IO("Working avatars")];
+  var jsx$7 = jsx$8.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array));
+  $m_Loutwatch_dom_package$();
+  var this$24 = $m_Lologwebsite_Me$().apply__Lologwebsite_Me().avatars$1;
+  var f = (function($this) {
+    return (function(avatar$2) {
+      var avatar = $as_Lologwebsite_Avatar(avatar$2);
+      var this$9 = $m_Loutwatch_dom_package$();
+      var this$8 = $m_Loutwatch_dom_dsl$();
+      var vnode$2 = this$8.div__Lcats_effect_IO();
+      var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$9, vnode$2);
+      var this$11 = $m_Loutwatch_dom_package$();
+      var this$10 = $m_Loutwatch_dom_dsl$();
+      var vnode$3 = this$10.a__Lcats_effect_IO();
+      var jsx$4 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$11, vnode$3);
+      var this$12 = $m_Loutwatch_dom_dsl$();
+      var this$13 = this$12.target__Loutwatch_dom_helpers_ValueBuilder();
+      var jsx$3 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$13, "_blank");
+      var this$14 = $m_Loutwatch_dom_dsl$();
+      var this$15 = this$14.rel__Loutwatch_dom_helpers_ValueBuilder();
+      var jsx$2 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$15, "noopener noreferrer");
+      var this$16 = $m_Loutwatch_dom_dsl$();
+      var this$17 = this$16.href__Loutwatch_dom_helpers_ValueBuilder();
+      var value = avatar.url$1;
+      var jsx$1 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$17, value);
+      $m_Loutwatch_dom_package$();
+      var value$1 = avatar.name$1;
+      var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
+      var array$1 = [jsx$3, jsx$2, jsx$1, mr$1.asModifier__T__Lcats_effect_IO(value$1)];
+      var array$2 = [jsx$4.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1))];
+      return jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2))
+    })
+  })(this);
+  var this$23 = $m_sci_List$();
+  var bf = this$23.ReusableCBFInstance$2;
+  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
+    if ((this$24 === $m_sci_Nil$())) {
+      var jsx$6 = $m_sci_Nil$()
+    } else {
+      var arg1 = this$24.head__O();
+      var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
+      var t = h;
+      var rest = $as_sci_List(this$24.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        var arg1$1 = rest.head__O();
+        var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
+        t.tl$5 = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      var jsx$6 = h
+    }
+  } else {
+    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$24, bf);
+    var these = this$24;
+    while ((!these.isEmpty__Z())) {
+      var arg1$2 = these.head__O();
+      b.$$plus$eq__O__scm_Builder(f(arg1$2));
+      these = $as_sci_List(these.tail__O())
+    };
+    var jsx$6 = b.result__O()
+  };
+  var modifiers = $as_sc_Seq(jsx$6);
+  var array$3 = [jsx$7, $m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
+  return jsx$9.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3))
+});
+var $d_Lologwebsite_Avatars$ = new $TypeData().initClass({
+  Lologwebsite_Avatars$: 0
+}, false, "ologwebsite.Avatars$", {
+  Lologwebsite_Avatars$: 1,
+  O: 1
+});
+$c_Lologwebsite_Avatars$.prototype.$classData = $d_Lologwebsite_Avatars$;
+var $n_Lologwebsite_Avatars$ = (void 0);
+function $m_Lologwebsite_Avatars$() {
+  if ((!$n_Lologwebsite_Avatars$)) {
+    $n_Lologwebsite_Avatars$ = new $c_Lologwebsite_Avatars$().init___()
+  };
+  return $n_Lologwebsite_Avatars$
+}
+/** @constructor */
+function $c_Lologwebsite_Biography$() {
+  $c_O.call(this)
+}
+$c_Lologwebsite_Biography$.prototype = new $h_O();
+$c_Lologwebsite_Biography$.prototype.constructor = $c_Lologwebsite_Biography$;
+/** @constructor */
+function $h_Lologwebsite_Biography$() {
+  /*<skip>*/
+}
+$h_Lologwebsite_Biography$.prototype = $c_Lologwebsite_Biography$.prototype;
+$c_Lologwebsite_Biography$.prototype.init___ = (function() {
+  return this
+});
+$c_Lologwebsite_Biography$.prototype.apply__Lcats_effect_IO = (function() {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.div__Lcats_effect_IO();
+  var jsx$4 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  var this$4 = $m_Loutwatch_dom_package$();
+  var this$3 = $m_Loutwatch_dom_dsl$();
+  var vnode$1 = this$3.h1__Lcats_effect_IO();
+  var jsx$3 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$4, vnode$1);
+  $m_Loutwatch_dom_package$();
+  var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array = [mr.asModifier__T__Lcats_effect_IO("Biography")];
+  var jsx$2 = jsx$3.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array));
+  var this$9 = $m_Loutwatch_dom_package$();
+  var this$8 = $m_Loutwatch_dom_dsl$();
+  var vnode$2 = this$8.p__Lcats_effect_IO();
+  var jsx$1 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$9, vnode$2);
+  $m_Loutwatch_dom_package$();
+  var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array$1 = [mr$1.asModifier__T__Lcats_effect_IO("\n      Skilled in a very diverse set of technologies, as often needed in heterogeneous projects/products where I contribute.\n      My main language is scala, but i also use javascript, go, python, java ... as needed in my daily work.\n      I have a lot of experience in building startup's, as a remote and on site contractor. ")];
+  var array$2 = [jsx$2, jsx$1.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1)), $m_Lologwebsite_Avatars$().apply__Lcats_effect_IO()];
+  return jsx$4.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2))
+});
+var $d_Lologwebsite_Biography$ = new $TypeData().initClass({
+  Lologwebsite_Biography$: 0
+}, false, "ologwebsite.Biography$", {
+  Lologwebsite_Biography$: 1,
+  O: 1
+});
+$c_Lologwebsite_Biography$.prototype.$classData = $d_Lologwebsite_Biography$;
+var $n_Lologwebsite_Biography$ = (void 0);
+function $m_Lologwebsite_Biography$() {
+  if ((!$n_Lologwebsite_Biography$)) {
+    $n_Lologwebsite_Biography$ = new $c_Lologwebsite_Biography$().init___()
+  };
+  return $n_Lologwebsite_Biography$
+}
+/** @constructor */
 function $c_Lologwebsite_Ologwebsite$() {
   $c_O.call(this);
-  this.now$1 = null;
-  this.me$1 = null;
-  this.warning$1 = null;
-  this.biography$1 = null;
-  this.menus$1 = null;
-  this.menu$1 = null
+  this.footer$1 = null;
+  this.menus$1 = null
 }
 $c_Lologwebsite_Ologwebsite$.prototype = new $h_O();
 $c_Lologwebsite_Ologwebsite$.prototype.constructor = $c_Lologwebsite_Ologwebsite$;
@@ -3527,192 +4159,123 @@ function $h_Lologwebsite_Ologwebsite$() {
 $h_Lologwebsite_Ologwebsite$.prototype = $c_Lologwebsite_Ologwebsite$.prototype;
 $c_Lologwebsite_Ologwebsite$.prototype.init___ = (function() {
   $n_Lologwebsite_Ologwebsite$ = this;
-  $m_Loutwatch_dom_package$();
-  var unit = $m_ju_concurrent_TimeUnit$().SECONDS$1;
-  var delay = new $c_s_concurrent_duration_FiniteDuration().init___J__ju_concurrent_TimeUnit(new $c_sjsr_RuntimeLong().init___I__I(1, 0), unit);
-  this.now$1 = new $c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable().init___s_concurrent_duration_FiniteDuration__s_concurrent_duration_FiniteDuration($m_s_concurrent_duration_Duration$().Zero$1, delay).map__F1__Lmonix_reactive_Observable(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
-    return (function(x$1$2) {
-      var t = $uJ(x$1$2);
-      return $m_Ljava_time_LocalDate$().now__Ljava_time_LocalDate().toString__T()
-    })
-  })(this)));
-  var jsx$1 = new $c_Lologwebsite_Location().init___Lologwebsite_Address__Ljava_time_LocalDate(new $c_Lologwebsite_Address().init___T("Brezice"), $m_Ljava_time_LocalDate$().of__I__I__I__Ljava_time_LocalDate(1979, 2, 20));
-  $m_sci_List$();
-  var array = [new $c_Lologwebsite_University().init___T("PMF"), new $c_Lologwebsite_University().init___T("Coursera"), new $c_Lologwebsite_University().init___T("Nikola Tesla")];
-  var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
-  var this$6 = $m_sci_List$();
-  var cbf = this$6.ReusableCBFInstance$2;
-  this.me$1 = new $c_Lologwebsite_Me().init___T__Lologwebsite_Location__sci_List("Rudolf", jsx$1, $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs, cbf)));
-  var this$8 = $m_Loutwatch_dom_package$();
-  var this$7 = $m_Loutwatch_dom_dsl$();
-  var vnode = this$7.div__Lcats_effect_IO();
-  var jsx$4 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$8, vnode);
-  $m_Loutwatch_dom_package$();
-  var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var jsx$3 = mr.asModifier__T__Lcats_effect_IO("Don't spend to much time here, in any case i will close this site for you in: ");
-  var jsx$2 = $m_Loutwatch_dom_dsl$().child__Loutwatch_dom_helpers_ChildStreamReceiverBuilder$().$$less$minus$minus__Lmonix_reactive_Observable__Loutwatch_StaticVNodeRender__Lcats_effect_IO(this.now$1, $m_Loutwatch_StaticVNodeRender$StringRender$());
-  $m_Loutwatch_dom_package$();
-  var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var array$1 = [jsx$3, jsx$2, mr$1.asModifier__T__Lcats_effect_IO(" seconds!!")];
-  this.warning$1 = jsx$4.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1));
-  var this$14 = $m_Loutwatch_dom_package$();
-  var this$13 = $m_Loutwatch_dom_dsl$();
-  var vnode$1 = this$13.div__Lcats_effect_IO();
-  var jsx$8 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$14, vnode$1);
-  var this$16 = $m_Loutwatch_dom_package$();
-  var this$15 = $m_Loutwatch_dom_dsl$();
-  var vnode$2 = this$15.h1__Lcats_effect_IO();
-  var jsx$7 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$16, vnode$2);
-  $m_Loutwatch_dom_package$();
-  var mr$2 = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var array$2 = [mr$2.asModifier__T__Lcats_effect_IO("Biography")];
-  var jsx$6 = jsx$7.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2));
-  var this$21 = $m_Loutwatch_dom_package$();
-  var this$20 = $m_Loutwatch_dom_dsl$();
-  var vnode$3 = this$20.p__Lcats_effect_IO();
-  var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$21, vnode$3);
-  $m_Loutwatch_dom_package$();
-  var this$22 = this.me$1.born$1;
-  var value = ("I was born on " + $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this$22));
-  var mr$3 = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var array$3 = [mr$3.asModifier__T__Lcats_effect_IO(value)];
-  var array$4 = [jsx$6, jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3))];
-  this.biography$1 = jsx$8.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$4));
-  $m_sci_List$();
-  var this$29 = $m_Loutwatch_dom_package$();
-  var this$28 = $m_Loutwatch_dom_dsl$();
-  var vnode$4 = this$28.div__Lcats_effect_IO();
-  var jsx$14 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$29, vnode$4);
-  $m_Loutwatch_dom_package$();
-  var mr$4 = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var array$5 = [mr$4.asModifier__T__Lcats_effect_IO("")];
-  var jsx$13 = new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Products", true, jsx$14.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$5)));
-  var this$34 = $m_Loutwatch_dom_package$();
-  var this$33 = $m_Loutwatch_dom_dsl$();
-  var vnode$5 = this$33.div__Lcats_effect_IO();
-  var jsx$12 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$34, vnode$5);
-  $m_Loutwatch_dom_package$();
-  var mr$5 = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var array$6 = [mr$5.asModifier__T__Lcats_effect_IO("")];
-  var jsx$11 = new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Services", true, jsx$12.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$6)));
-  var this$39 = $m_Loutwatch_dom_package$();
-  var this$38 = $m_Loutwatch_dom_dsl$();
-  var vnode$6 = this$38.div__Lcats_effect_IO();
-  var jsx$10 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$39, vnode$6);
-  $m_Loutwatch_dom_package$();
-  var mr$6 = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var array$7 = [mr$6.asModifier__T__Lcats_effect_IO("")];
-  var jsx$9 = new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Blog", true, jsx$10.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$7)));
-  var this$43 = $m_Loutwatch_dom_package$();
-  var vnode$7 = this.biography$1;
-  var array$8 = [jsx$13, jsx$11, jsx$9, new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Biography", true, new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$43, vnode$7).apply__sc_Seq__Lcats_effect_IO($m_sci_Nil$())), new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Quadratic Dating", true, $m_Lologwebsite_Views$().view__sci_List__Lcats_effect_IO($m_Lquadraticdating_Users$().all$1))];
-  var xs$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$8);
-  var this$47 = $m_sci_List$();
-  var cbf$1 = this$47.ReusableCBFInstance$2;
-  this.menus$1 = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$1, cbf$1));
-  var this$49 = $m_Loutwatch_dom_package$();
-  var this$48 = $m_Loutwatch_dom_dsl$();
-  var vnode$8 = this$48.div__Lcats_effect_IO();
-  var jsx$19 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$49, vnode$8);
-  $m_Loutwatch_dom_package$();
-  var this$61 = this.menus$1;
-  var f = (function(this$2$1) {
-    return (function(m$2) {
-      var m = $as_Lologwebsite_Menu(m$2);
-      var this$51 = $m_Loutwatch_dom_package$();
-      var this$50 = $m_Loutwatch_dom_dsl$();
-      var vnode$9 = this$50.input__Lcats_effect_IO();
-      var jsx$17 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$51, vnode$9);
-      var this$52 = $m_Loutwatch_dom_dsl$();
-      var this$53 = this$52.hidden__Loutwatch_dom_helpers_ValueBuilder();
-      var value$1 = (!m.visible$1);
-      var jsx$16 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$53, value$1);
-      var this$54 = $m_Loutwatch_dom_dsl$();
-      var this$55 = this$54.tpe__Loutwatch_dom_helpers_AttributeBuilder();
-      var jsx$15 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$55, "button");
-      var this$56 = $m_Loutwatch_dom_dsl$();
-      var this$57 = this$56.value__Loutwatch_dom_helpers_PropertyBuilder();
-      var value$2 = m.name$1;
-      var array$9 = [jsx$16, jsx$15, $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$57, value$2)];
-      return jsx$17.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$9))
-    })
-  })(this);
-  var this$60 = $m_sci_List$();
-  var bf = this$60.ReusableCBFInstance$2;
-  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
-    if ((this$61 === $m_sci_Nil$())) {
-      var jsx$18 = $m_sci_Nil$()
-    } else {
-      var arg1 = this$61.head__O();
-      var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
-      var t$1 = h;
-      var rest = $as_sci_List(this$61.tail__O());
-      while ((rest !== $m_sci_Nil$())) {
-        var arg1$1 = rest.head__O();
-        var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
-        t$1.tl$5 = nx;
-        t$1 = nx;
-        rest = $as_sci_List(rest.tail__O())
-      };
-      var jsx$18 = h
-    }
-  } else {
-    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$61, bf);
-    var these = this$61;
-    while ((!these.isEmpty__Z())) {
-      var arg1$2 = these.head__O();
-      b.$$plus$eq__O__scm_Builder(f(arg1$2));
-      these = $as_sci_List(these.tail__O())
-    };
-    var jsx$18 = b.result__O()
-  };
-  var modifiers = $as_sc_Seq(jsx$18);
-  var array$10 = [$m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
-  this.menu$1 = jsx$19.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$10));
-  return this
-});
-$c_Lologwebsite_Ologwebsite$.prototype.main__AT__V = (function(args) {
-  var jsx$9 = $m_Loutwatch_dom_OutWatch$();
   var this$2 = $m_Loutwatch_dom_package$();
   var this$1 = $m_Loutwatch_dom_dsl$();
   var vnode = this$1.div__Lcats_effect_IO();
-  var jsx$8 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
-  var this$4 = $m_Loutwatch_dom_package$();
+  var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
   var this$3 = $m_Loutwatch_dom_dsl$();
-  var vnode$1 = this$3.h1__Lcats_effect_IO();
-  var jsx$7 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$4, vnode$1);
+  var this$4 = this$3.id__Loutwatch_dom_helpers_ValueBuilder();
+  var jsx$4 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$4, "footer");
   $m_Loutwatch_dom_package$();
   var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var array = [mr.asModifier__T__Lcats_effect_IO("Hello World")];
-  var jsx$6 = jsx$7.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array));
-  var this$9 = $m_Loutwatch_dom_package$();
+  var jsx$3 = mr.asModifier__T__Lcats_effect_IO("Site is created by: ");
+  var this$7 = $m_Loutwatch_dom_package$();
+  var this$6 = $m_Loutwatch_dom_dsl$();
+  var vnode$1 = this$6.a__Lcats_effect_IO();
+  var jsx$2 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$7, vnode$1);
   var this$8 = $m_Loutwatch_dom_dsl$();
-  var vnode$2 = this$8.h1__Lcats_effect_IO();
-  var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$9, vnode$2);
+  var this$9 = this$8.href__Loutwatch_dom_helpers_ValueBuilder();
+  var jsx$1 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$9, "https://outwatch.github.io/");
   $m_Loutwatch_dom_package$();
   var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
-  var array$1 = [mr$1.asModifier__T__Lcats_effect_IO("Hello World")];
-  var jsx$4 = jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1));
-  var jsx$3 = this.warning$1;
-  var jsx$2 = this.menu$1;
+  var array = [jsx$1, mr$1.asModifier__T__Lcats_effect_IO("Outwatch")];
+  var array$1 = [jsx$4, jsx$3, jsx$2.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array))];
+  this.footer$1 = jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1));
+  $m_sci_List$();
+  var this$16 = $m_Loutwatch_dom_package$();
+  var this$15 = $m_Loutwatch_dom_dsl$();
+  var vnode$2 = this$15.div__Lcats_effect_IO();
+  var jsx$10 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$16, vnode$2);
   $m_Loutwatch_dom_package$();
-  var this$14 = this.menus$1;
-  var f = (function($this) {
-    return (function(x$2$2) {
-      var x$2 = $as_Lologwebsite_Menu(x$2$2);
-      return x$2.content$1
+  var mr$2 = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array$2 = [mr$2.asModifier__T__Lcats_effect_IO("")];
+  var jsx$9 = new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Products", false, jsx$10.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2)));
+  var this$21 = $m_Loutwatch_dom_package$();
+  var this$20 = $m_Loutwatch_dom_dsl$();
+  var vnode$3 = this$20.div__Lcats_effect_IO();
+  var jsx$8 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$21, vnode$3);
+  $m_Loutwatch_dom_package$();
+  var mr$3 = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array$3 = [mr$3.asModifier__T__Lcats_effect_IO("")];
+  var jsx$7 = new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Idols", false, jsx$8.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3)));
+  var this$26 = $m_Loutwatch_dom_package$();
+  var this$25 = $m_Loutwatch_dom_dsl$();
+  var vnode$4 = this$25.div__Lcats_effect_IO();
+  var jsx$6 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$26, vnode$4);
+  $m_Loutwatch_dom_package$();
+  var mr$4 = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array$4 = [mr$4.asModifier__T__Lcats_effect_IO("")];
+  var array$5 = [jsx$9, jsx$7, new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Blog", false, jsx$6.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$4))), new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Biography", true, $m_Lologwebsite_Biography$().apply__Lcats_effect_IO()), new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Quadratic Dating", false, $m_Lquadraticdating_QuadraticDating$().apply__Lcats_effect_IO()), new $c_Lologwebsite_Menu().init___T__Z__Lcats_effect_IO("Daily Tours", false, $m_Ldailytours_DailyTours$().apply__Lcats_effect_IO())];
+  var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$5);
+  var this$33 = $m_sci_List$();
+  var cbf = this$33.ReusableCBFInstance$2;
+  this.menus$1 = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs, cbf));
+  return this
+});
+$c_Lologwebsite_Ologwebsite$.prototype.header__Lmonix_reactive_Observable__Lcats_effect_IO = (function(selected) {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.div__Lcats_effect_IO();
+  var jsx$13 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  var this$3 = $m_Loutwatch_dom_dsl$();
+  var this$4 = this$3.id__Loutwatch_dom_helpers_ValueBuilder();
+  var jsx$12 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$4, "header");
+  var this$6 = $m_Loutwatch_dom_package$();
+  var this$5 = $m_Loutwatch_dom_dsl$();
+  var vnode$1 = this$5.div__Lcats_effect_IO();
+  var jsx$11 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$6, vnode$1);
+  var this$7 = $m_Loutwatch_dom_dsl$();
+  var this$8 = this$7.id__Loutwatch_dom_helpers_ValueBuilder();
+  var jsx$10 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$8, "logo");
+  var this$10 = $m_Loutwatch_dom_package$();
+  var this$9 = $m_Loutwatch_dom_dsl$();
+  var vnode$2 = this$9.a__Lcats_effect_IO();
+  var jsx$9 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$10, vnode$2);
+  $m_Loutwatch_dom_package$();
+  var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
+  var array = [mr.asModifier__T__Lcats_effect_IO("sahataba blog")];
+  var array$1 = [jsx$10, jsx$9.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array))];
+  var jsx$8 = jsx$11.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1));
+  var this$17 = $m_Loutwatch_dom_package$();
+  var this$16 = $m_Loutwatch_dom_dsl$();
+  var vnode$3 = this$16.div__Lcats_effect_IO();
+  var jsx$7 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$17, vnode$3);
+  var this$18 = $m_Loutwatch_dom_dsl$();
+  var this$19 = this$18.id__Loutwatch_dom_helpers_ValueBuilder();
+  var jsx$6 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$19, "navigation");
+  $m_Loutwatch_dom_package$();
+  var this$29 = this.menus$1;
+  var f = (function($this, selected$1) {
+    return (function(m$2) {
+      var m = $as_Lologwebsite_Menu(m$2);
+      var this$21 = $m_Loutwatch_dom_package$();
+      var this$20 = $m_Loutwatch_dom_dsl$();
+      var vnode$4 = this$20.a__Lcats_effect_IO();
+      var jsx$4 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$21, vnode$4);
+      var this$22 = $m_Loutwatch_dom_dsl$();
+      var this$23 = this$22.hidden__Loutwatch_dom_helpers_ValueBuilder();
+      var value = (!m.visible$1);
+      var jsx$3 = $f_Loutwatch_dom_helpers_ValueBuilder__$$colon$eq__O__Lcats_effect_IO(this$23, value);
+      var jsx$2 = $m_Loutwatch_dom_helpers_SimpleEmitterBuilder$();
+      var this$24 = $m_Loutwatch_dom_dsl$();
+      var jsx$1 = jsx$2.$$minus$minus$greater$extension__F1__Loutwatch_Sink__Lcats_effect_IO(new $c_Loutwatch_dom_helpers_SimpleEmitterBuilder().init___F1(this$24.onClick__F1()).create$1, $as_Loutwatch_Sink(selected$1));
+      $m_Loutwatch_dom_package$();
+      var value$1 = m.name$1;
+      var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
+      var array$2 = [jsx$3, jsx$1, mr$1.asModifier__T__Lcats_effect_IO(value$1)];
+      return jsx$4.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2))
     })
-  })(this);
-  var this$13 = $m_sci_List$();
-  var bf = this$13.ReusableCBFInstance$2;
+  })(this, selected);
+  var this$28 = $m_sci_List$();
+  var bf = this$28.ReusableCBFInstance$2;
   if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
-    if ((this$14 === $m_sci_Nil$())) {
-      var jsx$1 = $m_sci_Nil$()
+    if ((this$29 === $m_sci_Nil$())) {
+      var jsx$5 = $m_sci_Nil$()
     } else {
-      var arg1 = this$14.head__O();
+      var arg1 = this$29.head__O();
       var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
       var t = h;
-      var rest = $as_sci_List(this$14.tail__O());
+      var rest = $as_sci_List(this$29.tail__O());
       while ((rest !== $m_sci_Nil$())) {
         var arg1$1 = rest.head__O();
         var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
@@ -3720,21 +4283,88 @@ $c_Lologwebsite_Ologwebsite$.prototype.main__AT__V = (function(args) {
         t = nx;
         rest = $as_sci_List(rest.tail__O())
       };
-      var jsx$1 = h
+      var jsx$5 = h
     }
   } else {
-    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$14, bf);
-    var these = this$14;
+    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$29, bf);
+    var these = this$29;
     while ((!these.isEmpty__Z())) {
       var arg1$2 = these.head__O();
       b.$$plus$eq__O__scm_Builder(f(arg1$2));
       these = $as_sci_List(these.tail__O())
     };
-    var jsx$1 = b.result__O()
+    var jsx$5 = b.result__O()
   };
-  var modifiers = $as_sc_Seq(jsx$1);
-  var array$2 = [jsx$6, jsx$4, jsx$3, jsx$2, $m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
-  jsx$9.renderInto__T__Lcats_effect_IO__Lmonix_execution_Scheduler__Lcats_effect_IO("#app", jsx$8.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2)), $m_Lmonix_execution_Scheduler$().Implicits__Lmonix_execution_schedulers_SchedulerCompanionImpl$Implicits$().global__Lmonix_execution_Scheduler()).unsafeRunSync__O()
+  var modifiers = $as_sc_Seq(jsx$5);
+  var array$3 = [jsx$6, $m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
+  var array$4 = [jsx$12, jsx$8, jsx$7.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3))];
+  return jsx$13.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$4))
+});
+$c_Lologwebsite_Ologwebsite$.prototype.content__T__Lcats_effect_IO = (function(selected) {
+  var this$1 = this.menus$1;
+  inlinereturn$1: {
+    var these = this$1;
+    while ((!these.isEmpty__Z())) {
+      var arg1 = these.head__O();
+      var x$1 = $as_Lologwebsite_Menu(arg1);
+      if ((x$1.name$1 === selected)) {
+        var this$2 = new $c_s_Some().init___O(these.head__O());
+        break inlinereturn$1
+      };
+      these = $as_sc_LinearSeqOptimized(these.tail__O())
+    };
+    var this$2 = $m_s_None$()
+  };
+  if (this$2.isEmpty__Z()) {
+    var this$3 = $m_s_None$()
+  } else {
+    var arg1$1 = this$2.get__O();
+    var x$2 = $as_Lologwebsite_Menu(arg1$1);
+    var this$3 = new $c_s_Some().init___O(x$2.content$1)
+  };
+  if (this$3.isEmpty__Z()) {
+    var this$5 = $m_Loutwatch_dom_package$();
+    var this$4 = $m_Loutwatch_dom_dsl$();
+    var vnode = this$4.div__Lcats_effect_IO();
+    var jsx$1 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$5, vnode).apply__sc_Seq__Lcats_effect_IO($m_sci_Nil$())
+  } else {
+    var jsx$1 = this$3.get__O()
+  };
+  return $as_Lcats_effect_IO(jsx$1)
+});
+$c_Lologwebsite_Ologwebsite$.prototype.main__AT__V = (function(args) {
+  $m_Loutwatch_dom_package$();
+  var s = $m_Lmonix_execution_Scheduler$().Implicits__Lmonix_execution_schedulers_SchedulerCompanionImpl$Implicits$().global__Lmonix_execution_Scheduler();
+  var this$11 = $m_Loutwatch_Pipe$().create__Lmonix_execution_Scheduler__Lcats_effect_IO(s);
+  var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
+    return (function(handler$2) {
+      var handler = $as_Lmonix_reactive_Observable(handler$2);
+      $m_Loutwatch_dom_package$();
+      var array = ["Biography"];
+      var elems = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
+      $m_Lmonix_reactive_Observable$();
+      var this$6 = new $c_Lmonix_reactive_internal_builders_IterableAsObservable().init___sc_Iterable(elems);
+      var other = handler.map__F1__Lmonix_reactive_Observable(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1) {
+        return (function(event$2) {
+          return $as_T(event$2.target.textContent)
+        })
+      })($this)));
+      var selected = new $c_Lmonix_reactive_internal_operators_ConcatObservable().init___Lmonix_reactive_Observable__Lmonix_reactive_Observable(this$6, other);
+      var this$8 = $m_Loutwatch_dom_package$();
+      var this$7 = $m_Loutwatch_dom_dsl$();
+      var vnode = this$7.div__Lcats_effect_IO();
+      var jsx$1 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$8, vnode);
+      var array$1 = [$m_Lologwebsite_Ologwebsite$().header__Lmonix_reactive_Observable__Lcats_effect_IO(handler), $m_Loutwatch_dom_dsl$().child__Loutwatch_dom_helpers_ChildStreamReceiverBuilder$().$$less$minus$minus__Lmonix_reactive_Observable__Lcats_effect_IO(selected.map__F1__Lmonix_reactive_Observable(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$2$1) {
+        return (function(selected$2$2) {
+          var selected$2 = $as_T(selected$2$2);
+          return $m_Lologwebsite_Ologwebsite$().content__T__Lcats_effect_IO(selected$2)
+        })
+      })($this)))), $m_Lologwebsite_Ologwebsite$().footer$1];
+      return jsx$1.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1))
+    })
+  })(this));
+  var root = new $c_Lcats_effect_IO$Bind().init___Lcats_effect_IO__F1(this$11, f);
+  $m_Loutwatch_dom_OutWatch$().renderInto__T__Lcats_effect_IO__Lmonix_execution_Scheduler__Lcats_effect_IO("body", root, $m_Lmonix_execution_Scheduler$().Implicits__Lmonix_execution_schedulers_SchedulerCompanionImpl$Implicits$().global__Lmonix_execution_Scheduler()).unsafeRunSync__O()
 });
 var $d_Lologwebsite_Ologwebsite$ = new $TypeData().initClass({
   Lologwebsite_Ologwebsite$: 0
@@ -3749,110 +4379,6 @@ function $m_Lologwebsite_Ologwebsite$() {
     $n_Lologwebsite_Ologwebsite$ = new $c_Lologwebsite_Ologwebsite$().init___()
   };
   return $n_Lologwebsite_Ologwebsite$
-}
-/** @constructor */
-function $c_Lologwebsite_Views$() {
-  $c_O.call(this)
-}
-$c_Lologwebsite_Views$.prototype = new $h_O();
-$c_Lologwebsite_Views$.prototype.constructor = $c_Lologwebsite_Views$;
-/** @constructor */
-function $h_Lologwebsite_Views$() {
-  /*<skip>*/
-}
-$h_Lologwebsite_Views$.prototype = $c_Lologwebsite_Views$.prototype;
-$c_Lologwebsite_Views$.prototype.init___ = (function() {
-  return this
-});
-$c_Lologwebsite_Views$.prototype.view__sci_List__Lcats_effect_IO = (function(users) {
-  var this$2 = $m_Loutwatch_dom_package$();
-  var this$1 = $m_Loutwatch_dom_dsl$();
-  var vnode = this$1.table__Lcats_effect_IO();
-  var jsx$8 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
-  $m_Loutwatch_dom_package$();
-  var f = (function($this) {
-    return (function(user$2) {
-      var user = $as_Lquadraticdating_User(user$2);
-      var this$4 = $m_Loutwatch_dom_package$();
-      var this$3 = $m_Loutwatch_dom_dsl$();
-      var vnode$1 = this$3.tr__Lcats_effect_IO();
-      var jsx$6 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$4, vnode$1);
-      var this$6 = $m_Loutwatch_dom_package$();
-      var this$5 = $m_Loutwatch_dom_dsl$();
-      var vnode$2 = this$5.td__Lcats_effect_IO();
-      var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$6, vnode$2);
-      $m_Loutwatch_dom_package$();
-      var value = user.name$1;
-      var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
-      var array = [mr.asModifier__T__Lcats_effect_IO(value)];
-      var jsx$4 = jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array));
-      var this$11 = $m_Loutwatch_dom_package$();
-      var this$10 = $m_Loutwatch_dom_dsl$();
-      var vnode$3 = this$10.td__Lcats_effect_IO();
-      var jsx$3 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$11, vnode$3);
-      $m_Loutwatch_dom_package$();
-      var value$1 = user.email$1;
-      var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
-      var array$1 = [mr$1.asModifier__T__Lcats_effect_IO(value$1)];
-      var jsx$2 = jsx$3.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1));
-      var this$16 = $m_Loutwatch_dom_package$();
-      var this$15 = $m_Loutwatch_dom_dsl$();
-      var vnode$4 = this$15.td__Lcats_effect_IO();
-      var jsx$1 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$16, vnode$4);
-      $m_Loutwatch_dom_package$();
-      var value$2 = user.gender$1.toString__T();
-      var mr$2 = $m_Loutwatch_ValueModifier$StringRenderer$();
-      var array$2 = [mr$2.asModifier__T__Lcats_effect_IO(value$2)];
-      var array$3 = [jsx$4, jsx$2, jsx$1.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2))];
-      return jsx$6.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3))
-    })
-  })(this);
-  var this$22 = $m_sci_List$();
-  var bf = this$22.ReusableCBFInstance$2;
-  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
-    if ((users === $m_sci_Nil$())) {
-      var jsx$7 = $m_sci_Nil$()
-    } else {
-      var arg1 = users.head__O();
-      var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
-      var t = h;
-      var rest = $as_sci_List(users.tail__O());
-      while ((rest !== $m_sci_Nil$())) {
-        var arg1$1 = rest.head__O();
-        var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
-        t.tl$5 = nx;
-        t = nx;
-        rest = $as_sci_List(rest.tail__O())
-      };
-      var jsx$7 = h
-    }
-  } else {
-    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(users, bf);
-    var these = users;
-    while ((!these.isEmpty__Z())) {
-      var arg1$2 = these.head__O();
-      b.$$plus$eq__O__scm_Builder(f(arg1$2));
-      these = $as_sci_List(these.tail__O())
-    };
-    var jsx$7 = b.result__O()
-  };
-  var modifiers = $as_sc_Seq(jsx$7);
-  var array$4 = [$m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
-  return jsx$8.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$4))
-});
-var $d_Lologwebsite_Views$ = new $TypeData().initClass({
-  Lologwebsite_Views$: 0
-}, false, "ologwebsite.Views$", {
-  Lologwebsite_Views$: 1,
-  O: 1
-});
-$c_Lologwebsite_Views$.prototype.$classData = $d_Lologwebsite_Views$;
-var $n_Lologwebsite_Views$ = (void 0);
-function $m_Lologwebsite_Views$() {
-  if ((!$n_Lologwebsite_Views$)) {
-    $n_Lologwebsite_Views$ = new $c_Lologwebsite_Views$().init___()
-  };
-  return $n_Lologwebsite_Views$
 }
 /** @constructor */
 function $c_Lorg_scalajs_dom_package$() {
@@ -3984,6 +4510,16 @@ function $h_Loutwatch_Pipe$() {
 $h_Loutwatch_Pipe$.prototype = $c_Loutwatch_Pipe$.prototype;
 $c_Loutwatch_Pipe$.prototype.init___ = (function() {
   return this
+});
+$c_Loutwatch_Pipe$.prototype.create__Lmonix_execution_Scheduler__Lcats_effect_IO = (function(s) {
+  $m_Lcats_effect_IO$();
+  var body = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this, s$1) {
+    return (function() {
+      var subjectSink = new $c_Loutwatch_Sink$SubjectSink().init___Lmonix_execution_Scheduler(s$1);
+      return new $c_Loutwatch_Sink$ObservableSink().init___Loutwatch_Sink__Lmonix_reactive_Observable(subjectSink, subjectSink)
+    })
+  })(this, s));
+  return new $c_Lcats_effect_IO$Delay().init___F0(body)
 });
 var $d_Loutwatch_Pipe$ = new $TypeData().initClass({
   Loutwatch_Pipe$: 0
@@ -4279,6 +4815,42 @@ function $asArrayOf_Loutwatch_dom_Property(obj, depth) {
   return (($isArrayOf_Loutwatch_dom_Property(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.dom.Property;", depth))
 }
 /** @constructor */
+function $c_Loutwatch_dom_helpers_BasicStyleBuilder$() {
+  $c_O.call(this)
+}
+$c_Loutwatch_dom_helpers_BasicStyleBuilder$.prototype = new $h_O();
+$c_Loutwatch_dom_helpers_BasicStyleBuilder$.prototype.constructor = $c_Loutwatch_dom_helpers_BasicStyleBuilder$;
+/** @constructor */
+function $h_Loutwatch_dom_helpers_BasicStyleBuilder$() {
+  /*<skip>*/
+}
+$h_Loutwatch_dom_helpers_BasicStyleBuilder$.prototype = $c_Loutwatch_dom_helpers_BasicStyleBuilder$.prototype;
+$c_Loutwatch_dom_helpers_BasicStyleBuilder$.prototype.init___ = (function() {
+  return this
+});
+$c_Loutwatch_dom_helpers_BasicStyleBuilder$.prototype.equals$extension__T__O__Z = (function($$this, x$1) {
+  if ($is_Loutwatch_dom_helpers_BasicStyleBuilder(x$1)) {
+    var BasicStyleBuilder$1 = ((x$1 === null) ? null : $as_Loutwatch_dom_helpers_BasicStyleBuilder(x$1).attributeName$1);
+    return ($$this === BasicStyleBuilder$1)
+  } else {
+    return false
+  }
+});
+var $d_Loutwatch_dom_helpers_BasicStyleBuilder$ = new $TypeData().initClass({
+  Loutwatch_dom_helpers_BasicStyleBuilder$: 0
+}, false, "outwatch.dom.helpers.BasicStyleBuilder$", {
+  Loutwatch_dom_helpers_BasicStyleBuilder$: 1,
+  O: 1
+});
+$c_Loutwatch_dom_helpers_BasicStyleBuilder$.prototype.$classData = $d_Loutwatch_dom_helpers_BasicStyleBuilder$;
+var $n_Loutwatch_dom_helpers_BasicStyleBuilder$ = (void 0);
+function $m_Loutwatch_dom_helpers_BasicStyleBuilder$() {
+  if ((!$n_Loutwatch_dom_helpers_BasicStyleBuilder$)) {
+    $n_Loutwatch_dom_helpers_BasicStyleBuilder$ = new $c_Loutwatch_dom_helpers_BasicStyleBuilder$().init___()
+  };
+  return $n_Loutwatch_dom_helpers_BasicStyleBuilder$
+}
+/** @constructor */
 function $c_Loutwatch_dom_helpers_ChildStreamReceiverBuilder$() {
   $c_O.call(this)
 }
@@ -4292,13 +4864,9 @@ $h_Loutwatch_dom_helpers_ChildStreamReceiverBuilder$.prototype = $c_Loutwatch_do
 $c_Loutwatch_dom_helpers_ChildStreamReceiverBuilder$.prototype.init___ = (function() {
   return this
 });
-$c_Loutwatch_dom_helpers_ChildStreamReceiverBuilder$.prototype.$$less$minus$minus__Lmonix_reactive_Observable__Loutwatch_StaticVNodeRender__Lcats_effect_IO = (function(valueStream, r) {
+$c_Loutwatch_dom_helpers_ChildStreamReceiverBuilder$.prototype.$$less$minus$minus__Lmonix_reactive_Observable__Lcats_effect_IO = (function(valueStream) {
   $m_Lcats_effect_IO$();
-  var a = new $c_Loutwatch_dom_ChildStreamReceiver().init___Lmonix_reactive_Observable(valueStream.map__F1__Lmonix_reactive_Observable(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, r$1) {
-    return (function(value$2) {
-      return r$1.render__T__Lcats_effect_IO($as_T(value$2))
-    })
-  })(this, r))));
+  var a = new $c_Loutwatch_dom_ChildStreamReceiver().init___Lmonix_reactive_Observable(valueStream);
   return new $c_Lcats_effect_IO$Pure().init___O(a)
 });
 var $d_Loutwatch_dom_helpers_ChildStreamReceiverBuilder$ = new $TypeData().initClass({
@@ -4351,6 +4919,111 @@ function $m_Loutwatch_dom_package$VDomModifier$() {
     $n_Loutwatch_dom_package$VDomModifier$ = new $c_Loutwatch_dom_package$VDomModifier$().init___()
   };
   return $n_Loutwatch_dom_package$VDomModifier$
+}
+/** @constructor */
+function $c_Lquadraticdating_QuadraticDating$() {
+  $c_O.call(this)
+}
+$c_Lquadraticdating_QuadraticDating$.prototype = new $h_O();
+$c_Lquadraticdating_QuadraticDating$.prototype.constructor = $c_Lquadraticdating_QuadraticDating$;
+/** @constructor */
+function $h_Lquadraticdating_QuadraticDating$() {
+  /*<skip>*/
+}
+$h_Lquadraticdating_QuadraticDating$.prototype = $c_Lquadraticdating_QuadraticDating$.prototype;
+$c_Lquadraticdating_QuadraticDating$.prototype.init___ = (function() {
+  return this
+});
+$c_Lquadraticdating_QuadraticDating$.prototype.apply__Lcats_effect_IO = (function() {
+  var this$2 = $m_Loutwatch_dom_package$();
+  var this$1 = $m_Loutwatch_dom_dsl$();
+  var vnode = this$1.table__Lcats_effect_IO();
+  var jsx$8 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$2, vnode);
+  $m_Loutwatch_dom_package$();
+  var this$23 = $m_Lquadraticdating_Users$().all$1;
+  var f = (function($this) {
+    return (function(user$2) {
+      var user = $as_Lquadraticdating_User(user$2);
+      var this$4 = $m_Loutwatch_dom_package$();
+      var this$3 = $m_Loutwatch_dom_dsl$();
+      var vnode$1 = this$3.tr__Lcats_effect_IO();
+      var jsx$6 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$4, vnode$1);
+      var this$6 = $m_Loutwatch_dom_package$();
+      var this$5 = $m_Loutwatch_dom_dsl$();
+      var vnode$2 = this$5.td__Lcats_effect_IO();
+      var jsx$5 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$6, vnode$2);
+      $m_Loutwatch_dom_package$();
+      var value = user.name$1;
+      var mr = $m_Loutwatch_ValueModifier$StringRenderer$();
+      var array = [mr.asModifier__T__Lcats_effect_IO(value)];
+      var jsx$4 = jsx$5.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array));
+      var this$11 = $m_Loutwatch_dom_package$();
+      var this$10 = $m_Loutwatch_dom_dsl$();
+      var vnode$3 = this$10.td__Lcats_effect_IO();
+      var jsx$3 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$11, vnode$3);
+      $m_Loutwatch_dom_package$();
+      var value$1 = user.email$1;
+      var mr$1 = $m_Loutwatch_ValueModifier$StringRenderer$();
+      var array$1 = [mr$1.asModifier__T__Lcats_effect_IO(value$1)];
+      var jsx$2 = jsx$3.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1));
+      var this$16 = $m_Loutwatch_dom_package$();
+      var this$15 = $m_Loutwatch_dom_dsl$();
+      var vnode$4 = this$15.td__Lcats_effect_IO();
+      var jsx$1 = new $c_Loutwatch_dom_Implicits$ioVTreeMerge().init___Loutwatch_dom_Implicits__Lcats_effect_IO(this$16, vnode$4);
+      $m_Loutwatch_dom_package$();
+      var value$2 = user.gender$1.toString__T();
+      var mr$2 = $m_Loutwatch_ValueModifier$StringRenderer$();
+      var array$2 = [mr$2.asModifier__T__Lcats_effect_IO(value$2)];
+      var array$3 = [jsx$4, jsx$2, jsx$1.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2))];
+      return jsx$6.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3))
+    })
+  })(this);
+  var this$22 = $m_sci_List$();
+  var bf = this$22.ReusableCBFInstance$2;
+  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
+    if ((this$23 === $m_sci_Nil$())) {
+      var jsx$7 = $m_sci_Nil$()
+    } else {
+      var arg1 = this$23.head__O();
+      var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
+      var t = h;
+      var rest = $as_sci_List(this$23.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        var arg1$1 = rest.head__O();
+        var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
+        t.tl$5 = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      var jsx$7 = h
+    }
+  } else {
+    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$23, bf);
+    var these = this$23;
+    while ((!these.isEmpty__Z())) {
+      var arg1$2 = these.head__O();
+      b.$$plus$eq__O__scm_Builder(f(arg1$2));
+      these = $as_sci_List(these.tail__O())
+    };
+    var jsx$7 = b.result__O()
+  };
+  var modifiers = $as_sc_Seq(jsx$7);
+  var array$4 = [$m_Loutwatch_dom_package$VDomModifier$().apply__sc_Seq__Lcats_effect_IO(modifiers)];
+  return jsx$8.apply__sc_Seq__Lcats_effect_IO(new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$4))
+});
+var $d_Lquadraticdating_QuadraticDating$ = new $TypeData().initClass({
+  Lquadraticdating_QuadraticDating$: 0
+}, false, "quadraticdating.QuadraticDating$", {
+  Lquadraticdating_QuadraticDating$: 1,
+  O: 1
+});
+$c_Lquadraticdating_QuadraticDating$.prototype.$classData = $d_Lquadraticdating_QuadraticDating$;
+var $n_Lquadraticdating_QuadraticDating$ = (void 0);
+function $m_Lquadraticdating_QuadraticDating$() {
+  if ((!$n_Lquadraticdating_QuadraticDating$)) {
+    $n_Lquadraticdating_QuadraticDating$ = new $c_Lquadraticdating_QuadraticDating$().init___()
+  };
+  return $n_Lquadraticdating_QuadraticDating$
 }
 /** @constructor */
 function $c_Lquadraticdating_Users$() {
@@ -6224,6 +6897,9 @@ function $m_sc_Iterator$() {
     $n_sc_Iterator$ = new $c_sc_Iterator$().init___()
   };
   return $n_sc_Iterator$
+}
+function $f_sc_TraversableOnce__copyToArray__O__I__V($thiz, xs, start) {
+  $thiz.copyToArray__O__I__I__V(xs, start, (($m_sr_ScalaRunTime$().array$undlength__O__I(xs) - start) | 0))
 }
 function $f_sc_TraversableOnce__to__scg_CanBuildFrom__O($thiz, cbf) {
   var b = cbf.apply__scm_Builder();
@@ -8551,6 +9227,24 @@ function $m_Lcom_raquo_domtypes_generic_codecs_package$BooleanAsAttrPresenceCode
   return $n_Lcom_raquo_domtypes_generic_codecs_package$BooleanAsAttrPresenceCodec$
 }
 /** @constructor */
+function $c_Lcom_raquo_domtypes_generic_keys_Style() {
+  $c_Lcom_raquo_domtypes_generic_keys_Key.call(this);
+  this.name$2 = null;
+  this.cssName$2 = null
+}
+$c_Lcom_raquo_domtypes_generic_keys_Style.prototype = new $h_Lcom_raquo_domtypes_generic_keys_Key();
+$c_Lcom_raquo_domtypes_generic_keys_Style.prototype.constructor = $c_Lcom_raquo_domtypes_generic_keys_Style;
+/** @constructor */
+function $h_Lcom_raquo_domtypes_generic_keys_Style() {
+  /*<skip>*/
+}
+$h_Lcom_raquo_domtypes_generic_keys_Style.prototype = $c_Lcom_raquo_domtypes_generic_keys_Style.prototype;
+$c_Lcom_raquo_domtypes_generic_keys_Style.prototype.init___T__T = (function(name, cssName) {
+  this.name$2 = name;
+  this.cssName$2 = cssName;
+  return this
+});
+/** @constructor */
 function $c_Lmonix_execution_Ack$$anon$1() {
   $c_O.call(this);
   this.$$outer$1 = null;
@@ -8946,86 +9640,18 @@ function $isArrayOf_Lmonix_execution_schedulers_TrampolinedRunnable(obj, depth) 
 function $asArrayOf_Lmonix_execution_schedulers_TrampolinedRunnable(obj, depth) {
   return (($isArrayOf_Lmonix_execution_schedulers_TrampolinedRunnable(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmonix.execution.schedulers.TrampolinedRunnable;", depth))
 }
-/** @constructor */
-function $c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1() {
-  $c_O.call(this);
-  this.counter$1 = $m_sjsr_RuntimeLong$().Zero__sjsr_RuntimeLong();
-  this.$$outer$1 = null;
-  this.subscriber$1$1 = null;
-  this.o$1$1 = null;
-  this.task$1$1 = null
+function $is_Lmonix_reactive_Observer(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lmonix_reactive_Observer)))
 }
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype = new $h_O();
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype.constructor = $c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1;
-/** @constructor */
-function $h_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1() {
-  /*<skip>*/
+function $as_Lmonix_reactive_Observer(obj) {
+  return (($is_Lmonix_reactive_Observer(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "monix.reactive.Observer"))
 }
-$h_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype = $c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype;
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype.init___Lmonix_reactive_internal_builders_IntervalFixedDelayObservable__Lmonix_reactive_observers_Subscriber__Lmonix_reactive_observers_Subscriber__Lmonix_execution_cancelables_MultiAssignCancelable = (function($$outer, subscriber$1, o$1, task$1) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$1 = $$outer
-  };
-  this.subscriber$1$1 = subscriber$1;
-  this.o$1$1 = o$1;
-  this.task$1$1 = task$1;
-  this.counter$1 = $m_sjsr_RuntimeLong$().Zero__sjsr_RuntimeLong();
-  return this
-});
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype.asyncScheduleNext__s_concurrent_Future__V = (function(r) {
-  r.onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
-    return (function(x0$1$2) {
-      var x0$1 = $as_s_util_Try(x0$1$2);
-      if ($is_s_util_Success(x0$1)) {
-        var x2 = $as_s_util_Success(x0$1);
-        var ack = $as_Lmonix_execution_Ack(x2.value$2);
-        var x$2 = $m_Lmonix_execution_Ack$Continue$();
-        if (((ack !== null) && (ack === x$2))) {
-          return $this.scheduleNext__Lmonix_execution_Cancelable()
-        } else {
-          return (void 0)
-        }
-      } else if ($is_s_util_Failure(x0$1)) {
-        var x3 = $as_s_util_Failure(x0$1);
-        var ex = x3.exception$2;
-        $this.subscriber$1$1.scheduler__Lmonix_execution_Scheduler().reportFailure__jl_Throwable__V(ex);
-        return (void 0)
-      } else {
-        throw new $c_s_MatchError().init___O(x0$1)
-      }
-    })
-  })(this)), this.subscriber$1$1.scheduler__Lmonix_execution_Scheduler())
-});
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype.run__V = (function() {
-  var ack = this.o$1$1.onNext__O__s_concurrent_Future(this.counter$1);
-  var x$2 = $m_Lmonix_execution_Ack$Continue$();
-  if (((ack !== null) && ack.equals__O__Z(x$2))) {
-    this.scheduleNext__Lmonix_execution_Cancelable()
-  } else {
-    var x$4 = $m_Lmonix_execution_Ack$Stop$();
-    if ((!((ack !== null) && ack.equals__O__Z(x$4)))) {
-      this.asyncScheduleNext__s_concurrent_Future__V(ack)
-    }
-  }
-});
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype.scheduleNext__Lmonix_execution_Cancelable = (function() {
-  var b = this.counter$1;
-  var bhi = b.hi$2;
-  var lo = ((1 + b.lo$2) | 0);
-  var hi = ((lo === 0) ? ((1 + bhi) | 0) : bhi);
-  this.counter$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi);
-  return this.task$1$1.$$colon$eq__Lmonix_execution_Cancelable__Lmonix_execution_cancelables_MultiAssignCancelable(this.subscriber$1$1.scheduler__Lmonix_execution_Scheduler().scheduleOnce__J__ju_concurrent_TimeUnit__jl_Runnable__Lmonix_execution_Cancelable(this.$$outer$1.monix$reactive$internal$builders$IntervalFixedDelayObservable$$delay$f.length$2, this.$$outer$1.monix$reactive$internal$builders$IntervalFixedDelayObservable$$delay$f.unit$2, this))
-});
-var $d_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1 = new $TypeData().initClass({
-  Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1: 0
-}, false, "monix.reactive.internal.builders.IntervalFixedDelayObservable$$anon$1", {
-  Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1: 1,
-  O: 1,
-  jl_Runnable: 1
-});
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1.prototype.$classData = $d_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1;
+function $isArrayOf_Lmonix_reactive_Observer(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmonix_reactive_Observer)))
+}
+function $asArrayOf_Lmonix_reactive_Observer(obj, depth) {
+  return (($isArrayOf_Lmonix_reactive_Observer(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmonix.reactive.Observer;", depth))
+}
 /** @constructor */
 function $c_Lmonix_reactive_internal_operators_BufferSlidingOperator() {
   $c_O.call(this);
@@ -9105,40 +9731,6 @@ var $d_Lmonix_reactive_internal_operators_MapOperator = new $TypeData().initClas
 });
 $c_Lmonix_reactive_internal_operators_MapOperator.prototype.$classData = $d_Lmonix_reactive_internal_operators_MapOperator;
 /** @constructor */
-function $c_Loutwatch_StaticVNodeRender$StringRender$() {
-  $c_O.call(this)
-}
-$c_Loutwatch_StaticVNodeRender$StringRender$.prototype = new $h_O();
-$c_Loutwatch_StaticVNodeRender$StringRender$.prototype.constructor = $c_Loutwatch_StaticVNodeRender$StringRender$;
-/** @constructor */
-function $h_Loutwatch_StaticVNodeRender$StringRender$() {
-  /*<skip>*/
-}
-$h_Loutwatch_StaticVNodeRender$StringRender$.prototype = $c_Loutwatch_StaticVNodeRender$StringRender$.prototype;
-$c_Loutwatch_StaticVNodeRender$StringRender$.prototype.init___ = (function() {
-  return this
-});
-$c_Loutwatch_StaticVNodeRender$StringRender$.prototype.render__T__Lcats_effect_IO = (function(value) {
-  $m_Lcats_effect_IO$();
-  var a = new $c_Loutwatch_dom_StringVNode().init___T(value);
-  return new $c_Lcats_effect_IO$Pure().init___O(a)
-});
-var $d_Loutwatch_StaticVNodeRender$StringRender$ = new $TypeData().initClass({
-  Loutwatch_StaticVNodeRender$StringRender$: 0
-}, false, "outwatch.StaticVNodeRender$StringRender$", {
-  Loutwatch_StaticVNodeRender$StringRender$: 1,
-  O: 1,
-  Loutwatch_StaticVNodeRender: 1
-});
-$c_Loutwatch_StaticVNodeRender$StringRender$.prototype.$classData = $d_Loutwatch_StaticVNodeRender$StringRender$;
-var $n_Loutwatch_StaticVNodeRender$StringRender$ = (void 0);
-function $m_Loutwatch_StaticVNodeRender$StringRender$() {
-  if ((!$n_Loutwatch_StaticVNodeRender$StringRender$)) {
-    $n_Loutwatch_StaticVNodeRender$StringRender$ = new $c_Loutwatch_StaticVNodeRender$StringRender$().init___()
-  };
-  return $n_Loutwatch_StaticVNodeRender$StringRender$
-}
-/** @constructor */
 function $c_Loutwatch_ValueModifier$StringRenderer$() {
   $c_O.call(this)
 }
@@ -9199,13 +9791,6 @@ function $isArrayOf_Loutwatch_dom_Hook(obj, depth) {
 function $asArrayOf_Loutwatch_dom_Hook(obj, depth) {
   return (($isArrayOf_Loutwatch_dom_Hook(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.dom.Hook;", depth))
 }
-function $f_Loutwatch_dom_Props__prop__T__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_PropertyBuilder($thiz, key, codec) {
-  return new $c_Loutwatch_dom_helpers_PropertyBuilder().init___T__F1(key, new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, codec$1) {
-    return (function(scalaValue$2) {
-      return codec$1.encode__O__O(scalaValue$2)
-    })
-  })($thiz, codec)))
-}
 function $f_Loutwatch_dom_ReflectedAttrs__reflectedAttr__T__T__Lcom_raquo_domtypes_generic_codecs_Codec__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_AttributeBuilder($thiz, attrKey, propKey, attrCodec, propCodec) {
   return new $c_Loutwatch_dom_helpers_AttributeBuilder().init___T__F1(attrKey, $m_Loutwatch_dom_DomTypesBuilder$CodecBuilder$().encodeAttribute__Lcom_raquo_domtypes_generic_codecs_Codec__F1(attrCodec))
 }
@@ -9222,34 +9807,46 @@ function $asArrayOf_Loutwatch_dom_StaticVNode(obj, depth) {
   return (($isArrayOf_Loutwatch_dom_StaticVNode(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.dom.StaticVNode;", depth))
 }
 /** @constructor */
-function $c_Loutwatch_dom_helpers_PropertyBuilder() {
-  $c_O.call(this);
-  this.attributeName$1 = null;
-  this.outwatch$dom$helpers$PropertyBuilder$$encode$f = null
+function $c_Loutwatch_dom_helpers_EmitterBuilder$() {
+  $c_O.call(this)
 }
-$c_Loutwatch_dom_helpers_PropertyBuilder.prototype = new $h_O();
-$c_Loutwatch_dom_helpers_PropertyBuilder.prototype.constructor = $c_Loutwatch_dom_helpers_PropertyBuilder;
+$c_Loutwatch_dom_helpers_EmitterBuilder$.prototype = new $h_O();
+$c_Loutwatch_dom_helpers_EmitterBuilder$.prototype.constructor = $c_Loutwatch_dom_helpers_EmitterBuilder$;
 /** @constructor */
-function $h_Loutwatch_dom_helpers_PropertyBuilder() {
+function $h_Loutwatch_dom_helpers_EmitterBuilder$() {
   /*<skip>*/
 }
-$h_Loutwatch_dom_helpers_PropertyBuilder.prototype = $c_Loutwatch_dom_helpers_PropertyBuilder.prototype;
-$c_Loutwatch_dom_helpers_PropertyBuilder.prototype.assign__O__Loutwatch_dom_Attribute = (function(value) {
-  return new $c_Loutwatch_dom_Prop().init___T__O(this.attributeName$1, this.outwatch$dom$helpers$PropertyBuilder$$encode$f.apply__O__O(value))
-});
-$c_Loutwatch_dom_helpers_PropertyBuilder.prototype.init___T__F1 = (function(attributeName, encode) {
-  this.attributeName$1 = attributeName;
-  this.outwatch$dom$helpers$PropertyBuilder$$encode$f = encode;
+$h_Loutwatch_dom_helpers_EmitterBuilder$.prototype = $c_Loutwatch_dom_helpers_EmitterBuilder$.prototype;
+$c_Loutwatch_dom_helpers_EmitterBuilder$.prototype.init___ = (function() {
   return this
 });
-var $d_Loutwatch_dom_helpers_PropertyBuilder = new $TypeData().initClass({
-  Loutwatch_dom_helpers_PropertyBuilder: 0
-}, false, "outwatch.dom.helpers.PropertyBuilder", {
-  Loutwatch_dom_helpers_PropertyBuilder: 1,
-  O: 1,
-  Loutwatch_dom_helpers_ValueBuilder: 1
+$c_Loutwatch_dom_helpers_EmitterBuilder$.prototype.apply__T__F1 = (function(eventType) {
+  return new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, eventType$1) {
+    return (function(observer$2) {
+      var observer = $as_Lmonix_reactive_Observer(observer$2);
+      return new $c_Loutwatch_dom_Emitter().init___T__F1(eventType$1, new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1, observer$1) {
+        return (function(event$2) {
+          return observer$1.onNext__O__s_concurrent_Future(event$2)
+        })
+      })($this, observer)))
+    })
+  })(this, eventType))
 });
-$c_Loutwatch_dom_helpers_PropertyBuilder.prototype.$classData = $d_Loutwatch_dom_helpers_PropertyBuilder;
+var $d_Loutwatch_dom_helpers_EmitterBuilder$ = new $TypeData().initClass({
+  Loutwatch_dom_helpers_EmitterBuilder$: 0
+}, false, "outwatch.dom.helpers.EmitterBuilder$", {
+  Loutwatch_dom_helpers_EmitterBuilder$: 1,
+  O: 1,
+  Loutwatch_dom_helpers_EmitterOps: 1
+});
+$c_Loutwatch_dom_helpers_EmitterBuilder$.prototype.$classData = $d_Loutwatch_dom_helpers_EmitterBuilder$;
+var $n_Loutwatch_dom_helpers_EmitterBuilder$ = (void 0);
+function $m_Loutwatch_dom_helpers_EmitterBuilder$() {
+  if ((!$n_Loutwatch_dom_helpers_EmitterBuilder$)) {
+    $n_Loutwatch_dom_helpers_EmitterBuilder$ = new $c_Loutwatch_dom_helpers_EmitterBuilder$().init___()
+  };
+  return $n_Loutwatch_dom_helpers_EmitterBuilder$
+}
 /** @constructor */
 function $c_jl_Number() {
   $c_O.call(this)
@@ -9946,6 +10543,15 @@ function $f_sc_Iterator__toStream__sci_Stream($thiz) {
     return $m_sci_Stream$Empty$()
   }
 }
+function $f_sc_Iterator__copyToArray__O__I__I__V($thiz, xs, start, len) {
+  var i = start;
+  var y = (($m_sr_ScalaRunTime$().array$undlength__O__I(xs) - start) | 0);
+  var end = ((start + ((len < y) ? len : y)) | 0);
+  while (((i < end) && $thiz.hasNext__Z())) {
+    $m_sr_ScalaRunTime$().array$undupdate__O__I__O__V(xs, i, $thiz.next__O());
+    i = ((1 + i) | 0)
+  }
+}
 /** @constructor */
 function $c_sc_TraversableLike$WithFilter() {
   $c_O.call(this);
@@ -10587,6 +11193,38 @@ function $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$() {
   return $n_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$
 }
 /** @constructor */
+function $c_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle() {
+  $c_Lcom_raquo_domtypes_generic_keys_Style.call(this);
+  this.auto$3 = null;
+  this.bitmap$0$3 = false;
+  this.$$outer$3 = null
+}
+$c_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle.prototype = new $h_Lcom_raquo_domtypes_generic_keys_Style();
+$c_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle.prototype.constructor = $c_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle;
+/** @constructor */
+function $h_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle() {
+  /*<skip>*/
+}
+$h_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle.prototype = $c_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle.prototype;
+$c_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle.prototype.init___Lcom_raquo_domtypes_generic_defs_styles_StylesMisc__T__T = (function($$outer, name, cssName) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$3 = $$outer
+  };
+  $c_Lcom_raquo_domtypes_generic_keys_Style.prototype.init___T__T.call(this, name, cssName);
+  return this
+});
+var $d_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle = new $TypeData().initClass({
+  Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle: 0
+}, false, "com.raquo.domtypes.generic.defs.styles.StylesMisc$AutoStyle", {
+  Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle: 1,
+  Lcom_raquo_domtypes_generic_keys_Style: 1,
+  Lcom_raquo_domtypes_generic_keys_Key: 1,
+  O: 1
+});
+$c_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle.prototype.$classData = $d_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle;
+/** @constructor */
 function $c_Ljava_time_LocalDate$() {
   $c_O.call(this);
   this.java$time$LocalDate$$iso$1 = null;
@@ -10639,10 +11277,6 @@ $c_Ljava_time_LocalDate$.prototype.init___ = (function() {
 });
 $c_Ljava_time_LocalDate$.prototype.of__I__I__I__Ljava_time_LocalDate = (function(year, month, dayOfMonth) {
   return new $c_Ljava_time_LocalDate().init___I__Ljava_time_Month__I(year, $m_Ljava_time_Month$().of__I__Ljava_time_Month(month), dayOfMonth)
-});
-$c_Ljava_time_LocalDate$.prototype.now__Ljava_time_LocalDate = (function() {
-  var d = new $g.Date();
-  return this.of__I__I__I__Ljava_time_LocalDate($uI(d.getFullYear()), ((1 + $uI(d.getMonth())) | 0), $uI(d.getDate()))
 });
 var $d_Ljava_time_LocalDate$ = new $TypeData().initClass({
   Ljava_time_LocalDate$: 0
@@ -11335,6 +11969,18 @@ function $m_Lmonix_reactive_Observable$() {
   };
   return $n_Lmonix_reactive_Observable$
 }
+function $is_Lmonix_reactive_Observer$Sync(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lmonix_reactive_Observer$Sync)))
+}
+function $as_Lmonix_reactive_Observer$Sync(obj) {
+  return (($is_Lmonix_reactive_Observer$Sync(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "monix.reactive.Observer$Sync"))
+}
+function $isArrayOf_Lmonix_reactive_Observer$Sync(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmonix_reactive_Observer$Sync)))
+}
+function $asArrayOf_Lmonix_reactive_Observer$Sync(obj, depth) {
+  return (($isArrayOf_Lmonix_reactive_Observer$Sync(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmonix.reactive.Observer$Sync;", depth))
+}
 /** @constructor */
 function $c_Lmonix_reactive_observables_ChainedObservable$() {
   $c_O.call(this)
@@ -11430,6 +12076,143 @@ function $isArrayOf_Lmonix_reactive_observers_Subscriber(obj, depth) {
 function $asArrayOf_Lmonix_reactive_observers_Subscriber(obj, depth) {
   return (($isArrayOf_Lmonix_reactive_observers_Subscriber(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmonix.reactive.observers.Subscriber;", depth))
 }
+var $d_Lmonix_reactive_observers_Subscriber = new $TypeData().initClass({
+  Lmonix_reactive_observers_Subscriber: 0
+}, true, "monix.reactive.observers.Subscriber", {
+  Lmonix_reactive_observers_Subscriber: 1,
+  Lmonix_reactive_Observer: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+/** @constructor */
+function $c_Lmonix_reactive_observers_Subscriber$() {
+  $c_O.call(this)
+}
+$c_Lmonix_reactive_observers_Subscriber$.prototype = new $h_O();
+$c_Lmonix_reactive_observers_Subscriber$.prototype.constructor = $c_Lmonix_reactive_observers_Subscriber$;
+/** @constructor */
+function $h_Lmonix_reactive_observers_Subscriber$() {
+  /*<skip>*/
+}
+$h_Lmonix_reactive_observers_Subscriber$.prototype = $c_Lmonix_reactive_observers_Subscriber$.prototype;
+$c_Lmonix_reactive_observers_Subscriber$.prototype.init___ = (function() {
+  return this
+});
+$c_Lmonix_reactive_observers_Subscriber$.prototype.apply__Lmonix_reactive_Observer__Lmonix_execution_Scheduler__Lmonix_reactive_observers_Subscriber = (function(observer, scheduler) {
+  if ($is_Lmonix_reactive_observers_Subscriber(observer)) {
+    var x2 = $as_Lmonix_reactive_observers_Subscriber(observer);
+    var x = x2.scheduler__Lmonix_execution_Scheduler();
+    if ((x === scheduler)) {
+      return x2
+    }
+  };
+  if ($is_Lmonix_reactive_Observer$Sync(observer)) {
+    var x3 = $as_Lmonix_reactive_Observer$Sync(observer);
+    return $m_Lmonix_reactive_observers_Subscriber$Sync$().apply__Lmonix_reactive_Observer$Sync__Lmonix_execution_Scheduler__Lmonix_reactive_observers_Subscriber$Sync(x3, scheduler)
+  };
+  return new $c_Lmonix_reactive_observers_Subscriber$Implementation().init___Lmonix_reactive_Observer__Lmonix_execution_Scheduler(observer, scheduler)
+});
+var $d_Lmonix_reactive_observers_Subscriber$ = new $TypeData().initClass({
+  Lmonix_reactive_observers_Subscriber$: 0
+}, false, "monix.reactive.observers.Subscriber$", {
+  Lmonix_reactive_observers_Subscriber$: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lmonix_reactive_observers_Subscriber$.prototype.$classData = $d_Lmonix_reactive_observers_Subscriber$;
+var $n_Lmonix_reactive_observers_Subscriber$ = (void 0);
+function $m_Lmonix_reactive_observers_Subscriber$() {
+  if ((!$n_Lmonix_reactive_observers_Subscriber$)) {
+    $n_Lmonix_reactive_observers_Subscriber$ = new $c_Lmonix_reactive_observers_Subscriber$().init___()
+  };
+  return $n_Lmonix_reactive_observers_Subscriber$
+}
+/** @constructor */
+function $c_Lmonix_reactive_observers_Subscriber$Sync$() {
+  $c_O.call(this)
+}
+$c_Lmonix_reactive_observers_Subscriber$Sync$.prototype = new $h_O();
+$c_Lmonix_reactive_observers_Subscriber$Sync$.prototype.constructor = $c_Lmonix_reactive_observers_Subscriber$Sync$;
+/** @constructor */
+function $h_Lmonix_reactive_observers_Subscriber$Sync$() {
+  /*<skip>*/
+}
+$h_Lmonix_reactive_observers_Subscriber$Sync$.prototype = $c_Lmonix_reactive_observers_Subscriber$Sync$.prototype;
+$c_Lmonix_reactive_observers_Subscriber$Sync$.prototype.init___ = (function() {
+  return this
+});
+$c_Lmonix_reactive_observers_Subscriber$Sync$.prototype.apply__Lmonix_reactive_Observer$Sync__Lmonix_execution_Scheduler__Lmonix_reactive_observers_Subscriber$Sync = (function(observer, scheduler) {
+  if ($is_Lmonix_reactive_observers_Subscriber$Sync(observer)) {
+    var x2 = $as_Lmonix_reactive_observers_Subscriber$Sync(observer);
+    var x = x2.scheduler$1;
+    if ((x === scheduler)) {
+      return x2
+    }
+  };
+  return new $c_Lmonix_reactive_observers_Subscriber$SyncImplementation().init___Lmonix_reactive_Observer$Sync__Lmonix_execution_Scheduler(observer, scheduler)
+});
+var $d_Lmonix_reactive_observers_Subscriber$Sync$ = new $TypeData().initClass({
+  Lmonix_reactive_observers_Subscriber$Sync$: 0
+}, false, "monix.reactive.observers.Subscriber$Sync$", {
+  Lmonix_reactive_observers_Subscriber$Sync$: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lmonix_reactive_observers_Subscriber$Sync$.prototype.$classData = $d_Lmonix_reactive_observers_Subscriber$Sync$;
+var $n_Lmonix_reactive_observers_Subscriber$Sync$ = (void 0);
+function $m_Lmonix_reactive_observers_Subscriber$Sync$() {
+  if ((!$n_Lmonix_reactive_observers_Subscriber$Sync$)) {
+    $n_Lmonix_reactive_observers_Subscriber$Sync$ = new $c_Lmonix_reactive_observers_Subscriber$Sync$().init___()
+  };
+  return $n_Lmonix_reactive_observers_Subscriber$Sync$
+}
+/** @constructor */
+function $c_Lologwebsite_Me$() {
+  $c_O.call(this)
+}
+$c_Lologwebsite_Me$.prototype = new $h_O();
+$c_Lologwebsite_Me$.prototype.constructor = $c_Lologwebsite_Me$;
+/** @constructor */
+function $h_Lologwebsite_Me$() {
+  /*<skip>*/
+}
+$h_Lologwebsite_Me$.prototype = $c_Lologwebsite_Me$.prototype;
+$c_Lologwebsite_Me$.prototype.init___ = (function() {
+  return this
+});
+$c_Lologwebsite_Me$.prototype.apply__Lologwebsite_Me = (function() {
+  var jsx$2 = new $c_Lologwebsite_Location().init___Lologwebsite_Address__Ljava_time_LocalDate(new $c_Lologwebsite_Address().init___T("Brezice"), $m_Ljava_time_LocalDate$().of__I__I__I__Ljava_time_LocalDate(1979, 2, 20));
+  $m_sci_List$();
+  var array = [new $c_Lologwebsite_University().init___T("PMF"), new $c_Lologwebsite_University().init___T("Coursera"), new $c_Lologwebsite_University().init___T("Nikola Tesla")];
+  var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
+  var this$4 = $m_sci_List$();
+  var cbf = this$4.ReusableCBFInstance$2;
+  var jsx$1 = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs, cbf));
+  $m_sci_List$();
+  var array$1 = [new $c_Lologwebsite_Avatar().init___T__T("https://www.upwork.com/o/profiles/users/_~0125ee9c9280a08953/", "Upwork"), new $c_Lologwebsite_Avatar().init___T__T("https://github.com/sahataba", "Github"), new $c_Lologwebsite_Avatar().init___T__T("https://www.linkedin.com/in/rudolfmarkulin/", "Linkedin")];
+  var xs$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1);
+  var this$8 = $m_sci_List$();
+  var cbf$1 = this$8.ReusableCBFInstance$2;
+  return new $c_Lologwebsite_Me().init___T__Lologwebsite_Location__sci_List__sci_List("Rudolf", jsx$2, jsx$1, $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$1, cbf$1)))
+});
+var $d_Lologwebsite_Me$ = new $TypeData().initClass({
+  Lologwebsite_Me$: 0
+}, false, "ologwebsite.Me$", {
+  Lologwebsite_Me$: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lologwebsite_Me$.prototype.$classData = $d_Lologwebsite_Me$;
+var $n_Lologwebsite_Me$ = (void 0);
+function $m_Lologwebsite_Me$() {
+  if ((!$n_Lologwebsite_Me$)) {
+    $n_Lologwebsite_Me$ = new $c_Lologwebsite_Me$().init___()
+  };
+  return $n_Lologwebsite_Me$
+}
 /** @constructor */
 function $c_Loutwatch_dom_helpers_AttributeBuilder() {
   $c_O.call(this);
@@ -11460,6 +12243,54 @@ var $d_Loutwatch_dom_helpers_AttributeBuilder = new $TypeData().initClass({
   Loutwatch_dom_helpers_AccumulateOps: 1
 });
 $c_Loutwatch_dom_helpers_AttributeBuilder.prototype.$classData = $d_Loutwatch_dom_helpers_AttributeBuilder;
+/** @constructor */
+function $c_Loutwatch_dom_helpers_BasicStyleBuilder() {
+  $c_O.call(this);
+  this.attributeName$1 = null
+}
+$c_Loutwatch_dom_helpers_BasicStyleBuilder.prototype = new $h_O();
+$c_Loutwatch_dom_helpers_BasicStyleBuilder.prototype.constructor = $c_Loutwatch_dom_helpers_BasicStyleBuilder;
+/** @constructor */
+function $h_Loutwatch_dom_helpers_BasicStyleBuilder() {
+  /*<skip>*/
+}
+$h_Loutwatch_dom_helpers_BasicStyleBuilder.prototype = $c_Loutwatch_dom_helpers_BasicStyleBuilder.prototype;
+$c_Loutwatch_dom_helpers_BasicStyleBuilder.prototype.equals__O__Z = (function(x$1) {
+  return $m_Loutwatch_dom_helpers_BasicStyleBuilder$().equals$extension__T__O__Z(this.attributeName$1, x$1)
+});
+$c_Loutwatch_dom_helpers_BasicStyleBuilder.prototype.init___T = (function(attributeName) {
+  this.attributeName$1 = attributeName;
+  return this
+});
+$c_Loutwatch_dom_helpers_BasicStyleBuilder.prototype.hashCode__I = (function() {
+  var $$this = this.attributeName$1;
+  return $m_sjsr_RuntimeString$().hashCode__T__I($$this)
+});
+$c_Loutwatch_dom_helpers_BasicStyleBuilder.prototype.assign__O__Loutwatch_dom_Attribute = (function(value) {
+  var $$this = this.attributeName$1;
+  return new $c_Loutwatch_dom_BasicStyle().init___T__T($$this, $objectToString(value))
+});
+function $is_Loutwatch_dom_helpers_BasicStyleBuilder(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_dom_helpers_BasicStyleBuilder)))
+}
+function $as_Loutwatch_dom_helpers_BasicStyleBuilder(obj) {
+  return (($is_Loutwatch_dom_helpers_BasicStyleBuilder(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "outwatch.dom.helpers.BasicStyleBuilder"))
+}
+function $isArrayOf_Loutwatch_dom_helpers_BasicStyleBuilder(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Loutwatch_dom_helpers_BasicStyleBuilder)))
+}
+function $asArrayOf_Loutwatch_dom_helpers_BasicStyleBuilder(obj, depth) {
+  return (($isArrayOf_Loutwatch_dom_helpers_BasicStyleBuilder(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.dom.helpers.BasicStyleBuilder;", depth))
+}
+var $d_Loutwatch_dom_helpers_BasicStyleBuilder = new $TypeData().initClass({
+  Loutwatch_dom_helpers_BasicStyleBuilder: 0
+}, false, "outwatch.dom.helpers.BasicStyleBuilder", {
+  Loutwatch_dom_helpers_BasicStyleBuilder: 1,
+  O: 1,
+  Loutwatch_dom_helpers_ValueBuilder: 1,
+  Loutwatch_dom_helpers_AccumulateStyleOps: 1
+});
+$c_Loutwatch_dom_helpers_BasicStyleBuilder.prototype.$classData = $d_Loutwatch_dom_helpers_BasicStyleBuilder;
 /** @constructor */
 function $c_Loutwatch_dom_helpers_SeparatedAttributes$() {
   $c_O.call(this)
@@ -11567,6 +12398,70 @@ function $m_Loutwatch_dom_helpers_SeparatedModifiers$() {
     $n_Loutwatch_dom_helpers_SeparatedModifiers$ = new $c_Loutwatch_dom_helpers_SeparatedModifiers$().init___()
   };
   return $n_Loutwatch_dom_helpers_SeparatedModifiers$
+}
+/** @constructor */
+function $c_Loutwatch_dom_helpers_SimpleEmitterBuilder$() {
+  $c_O.call(this)
+}
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype = new $h_O();
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.constructor = $c_Loutwatch_dom_helpers_SimpleEmitterBuilder$;
+/** @constructor */
+function $h_Loutwatch_dom_helpers_SimpleEmitterBuilder$() {
+  /*<skip>*/
+}
+$h_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype = $c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype;
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.init___ = (function() {
+  return this
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.$$minus$minus$greater$extension__F1__Loutwatch_Sink__Lcats_effect_IO = (function($$this, sink) {
+  $m_Lcats_effect_IO$();
+  var a = $$this.apply__O__O(sink.observer__Lmonix_reactive_observers_Subscriber());
+  return new $c_Lcats_effect_IO$Pure().init___O(a)
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.productElement$extension__F1__I__O = (function($$this, x$1) {
+  switch (x$1) {
+    case 0: {
+      return $$this;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.productIterator$extension__F1__sc_Iterator = (function($$this) {
+  var x = new $c_Loutwatch_dom_helpers_SimpleEmitterBuilder().init___F1($$this);
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(x)
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.toString__T = (function() {
+  return "SimpleEmitterBuilder"
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.toString$extension__F1__T = (function($$this) {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(new $c_Loutwatch_dom_helpers_SimpleEmitterBuilder().init___F1($$this))
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.equals$extension__F1__O__Z = (function($$this, x$1) {
+  if ($is_Loutwatch_dom_helpers_SimpleEmitterBuilder(x$1)) {
+    var SimpleEmitterBuilder$1 = ((x$1 === null) ? null : $as_Loutwatch_dom_helpers_SimpleEmitterBuilder(x$1).create$1);
+    return (($$this === null) ? (SimpleEmitterBuilder$1 === null) : $$this.equals__O__Z(SimpleEmitterBuilder$1))
+  } else {
+    return false
+  }
+});
+var $d_Loutwatch_dom_helpers_SimpleEmitterBuilder$ = new $TypeData().initClass({
+  Loutwatch_dom_helpers_SimpleEmitterBuilder$: 0
+}, false, "outwatch.dom.helpers.SimpleEmitterBuilder$", {
+  Loutwatch_dom_helpers_SimpleEmitterBuilder$: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder$.prototype.$classData = $d_Loutwatch_dom_helpers_SimpleEmitterBuilder$;
+var $n_Loutwatch_dom_helpers_SimpleEmitterBuilder$ = (void 0);
+function $m_Loutwatch_dom_helpers_SimpleEmitterBuilder$() {
+  if ((!$n_Loutwatch_dom_helpers_SimpleEmitterBuilder$)) {
+    $n_Loutwatch_dom_helpers_SimpleEmitterBuilder$ = new $c_Loutwatch_dom_helpers_SimpleEmitterBuilder$().init___()
+  };
+  return $n_Loutwatch_dom_helpers_SimpleEmitterBuilder$
 }
 var $d_jl_Boolean = new $TypeData().initClass({
   jl_Boolean: 0
@@ -14877,47 +15772,6 @@ function $m_Lmonix_reactive_internal_builders_EmptyObservable$() {
   return $n_Lmonix_reactive_internal_builders_EmptyObservable$
 }
 /** @constructor */
-function $c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable() {
-  $c_Lmonix_reactive_Observable.call(this);
-  this.initialDelay$2 = null;
-  this.monix$reactive$internal$builders$IntervalFixedDelayObservable$$delay$f = null
-}
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable.prototype = new $h_Lmonix_reactive_Observable();
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable.prototype.constructor = $c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable;
-/** @constructor */
-function $h_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable() {
-  /*<skip>*/
-}
-$h_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable.prototype = $c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable.prototype;
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable.prototype.init___s_concurrent_duration_FiniteDuration__s_concurrent_duration_FiniteDuration = (function(initialDelay, delay) {
-  this.initialDelay$2 = initialDelay;
-  this.monix$reactive$internal$builders$IntervalFixedDelayObservable$$delay$f = delay;
-  return this
-});
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable.prototype.unsafeSubscribeFn__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Cancelable = (function(subscriber) {
-  var task = new $c_Lmonix_execution_cancelables_MultiAssignCancelable().init___Lmonix_execution_Cancelable($m_Lmonix_execution_Cancelable$().empty$1);
-  var runnable = new $c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable$$anon$1().init___Lmonix_reactive_internal_builders_IntervalFixedDelayObservable__Lmonix_reactive_observers_Subscriber__Lmonix_reactive_observers_Subscriber__Lmonix_execution_cancelables_MultiAssignCancelable(this, subscriber, subscriber, task);
-  var t = this.initialDelay$2.length$2;
-  var lo = t.lo$2;
-  var hi = t.hi$2;
-  if (((hi === 0) ? (lo === 0) : (hi < 0))) {
-    runnable.run__V()
-  } else {
-    task.$$colon$eq__Lmonix_execution_Cancelable__Lmonix_execution_cancelables_MultiAssignCancelable(subscriber.scheduler__Lmonix_execution_Scheduler().scheduleOnce__J__ju_concurrent_TimeUnit__jl_Runnable__Lmonix_execution_Cancelable(this.initialDelay$2.length$2, this.initialDelay$2.unit$2, runnable))
-  };
-  return task
-});
-var $d_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable = new $TypeData().initClass({
-  Lmonix_reactive_internal_builders_IntervalFixedDelayObservable: 0
-}, false, "monix.reactive.internal.builders.IntervalFixedDelayObservable", {
-  Lmonix_reactive_internal_builders_IntervalFixedDelayObservable: 1,
-  Lmonix_reactive_Observable: 1,
-  O: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable.prototype.$classData = $d_Lmonix_reactive_internal_builders_IntervalFixedDelayObservable;
-/** @constructor */
 function $c_Lmonix_reactive_internal_builders_IterableAsObservable() {
   $c_Lmonix_reactive_Observable.call(this);
   this.iterable$2 = null
@@ -16676,6 +17530,9 @@ $c_sc_AbstractIterator.prototype.toStream__sci_Stream = (function() {
 $c_sc_AbstractIterator.prototype.addString__scm_StringBuilder__T__T__T__scm_StringBuilder = (function(b, start, sep, end) {
   return $f_sc_TraversableOnce__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
 });
+$c_sc_AbstractIterator.prototype.copyToArray__O__I__I__V = (function(xs, start, len) {
+  $f_sc_Iterator__copyToArray__O__I__I__V(this, xs, start, len)
+});
 $c_sc_AbstractIterator.prototype.isTraversableAgain__Z = (function() {
   return false
 });
@@ -16915,6 +17772,9 @@ $c_sjs_js_WrappedDictionary$DictionaryIterator.prototype.toStream__sci_Stream = 
 $c_sjs_js_WrappedDictionary$DictionaryIterator.prototype.addString__scm_StringBuilder__T__T__T__scm_StringBuilder = (function(b, start, sep, end) {
   return $f_sc_TraversableOnce__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
 });
+$c_sjs_js_WrappedDictionary$DictionaryIterator.prototype.copyToArray__O__I__I__V = (function(xs, start, len) {
+  $f_sc_Iterator__copyToArray__O__I__I__V(this, xs, start, len)
+});
 $c_sjs_js_WrappedDictionary$DictionaryIterator.prototype.isTraversableAgain__Z = (function() {
   return false
 });
@@ -17120,6 +17980,378 @@ var $d_sjsr_RuntimeLong = new $TypeData().initClass({
   jl_Comparable: 1
 });
 $c_sjsr_RuntimeLong.prototype.$classData = $d_sjsr_RuntimeLong;
+/** @constructor */
+function $c_Ldailytours_Author() {
+  $c_O.call(this);
+  this.name$1 = null;
+  this.imageUrl$1 = null
+}
+$c_Ldailytours_Author.prototype = new $h_O();
+$c_Ldailytours_Author.prototype.constructor = $c_Ldailytours_Author;
+/** @constructor */
+function $h_Ldailytours_Author() {
+  /*<skip>*/
+}
+$h_Ldailytours_Author.prototype = $c_Ldailytours_Author.prototype;
+$c_Ldailytours_Author.prototype.init___T__T = (function(name, imageUrl) {
+  this.name$1 = name;
+  this.imageUrl$1 = imageUrl;
+  return this
+});
+$c_Ldailytours_Author.prototype.productPrefix__T = (function() {
+  return "Author"
+});
+$c_Ldailytours_Author.prototype.productArity__I = (function() {
+  return 2
+});
+$c_Ldailytours_Author.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Ldailytours_Author(x$1)) {
+    var Author$1 = $as_Ldailytours_Author(x$1);
+    return ((this.name$1 === Author$1.name$1) && (this.imageUrl$1 === Author$1.imageUrl$1))
+  } else {
+    return false
+  }
+});
+$c_Ldailytours_Author.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.name$1;
+      break
+    }
+    case 1: {
+      return this.imageUrl$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Ldailytours_Author.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Ldailytours_Author.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Ldailytours_Author.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Ldailytours_Author(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Ldailytours_Author)))
+}
+function $as_Ldailytours_Author(obj) {
+  return (($is_Ldailytours_Author(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "dailytours.Author"))
+}
+function $isArrayOf_Ldailytours_Author(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ldailytours_Author)))
+}
+function $asArrayOf_Ldailytours_Author(obj, depth) {
+  return (($isArrayOf_Ldailytours_Author(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ldailytours.Author;", depth))
+}
+var $d_Ldailytours_Author = new $TypeData().initClass({
+  Ldailytours_Author: 0
+}, false, "dailytours.Author", {
+  Ldailytours_Author: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ldailytours_Author.prototype.$classData = $d_Ldailytours_Author;
+/** @constructor */
+function $c_Ldailytours_Event() {
+  $c_O.call(this);
+  this.name$1 = null;
+  this.place$1 = null
+}
+$c_Ldailytours_Event.prototype = new $h_O();
+$c_Ldailytours_Event.prototype.constructor = $c_Ldailytours_Event;
+/** @constructor */
+function $h_Ldailytours_Event() {
+  /*<skip>*/
+}
+$h_Ldailytours_Event.prototype = $c_Ldailytours_Event.prototype;
+$c_Ldailytours_Event.prototype.productPrefix__T = (function() {
+  return "Event"
+});
+$c_Ldailytours_Event.prototype.productArity__I = (function() {
+  return 2
+});
+$c_Ldailytours_Event.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Ldailytours_Event(x$1)) {
+    var Event$1 = $as_Ldailytours_Event(x$1);
+    if ((this.name$1 === Event$1.name$1)) {
+      var x = this.place$1;
+      var x$2 = Event$1.place$1;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Ldailytours_Event.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.name$1;
+      break
+    }
+    case 1: {
+      return this.place$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Ldailytours_Event.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Ldailytours_Event.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Ldailytours_Event.prototype.init___T__Ldailytours_Place = (function(name, place) {
+  this.name$1 = name;
+  this.place$1 = place;
+  return this
+});
+$c_Ldailytours_Event.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Ldailytours_Event(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Ldailytours_Event)))
+}
+function $as_Ldailytours_Event(obj) {
+  return (($is_Ldailytours_Event(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "dailytours.Event"))
+}
+function $isArrayOf_Ldailytours_Event(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ldailytours_Event)))
+}
+function $asArrayOf_Ldailytours_Event(obj, depth) {
+  return (($isArrayOf_Ldailytours_Event(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ldailytours.Event;", depth))
+}
+var $d_Ldailytours_Event = new $TypeData().initClass({
+  Ldailytours_Event: 0
+}, false, "dailytours.Event", {
+  Ldailytours_Event: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ldailytours_Event.prototype.$classData = $d_Ldailytours_Event;
+/** @constructor */
+function $c_Ldailytours_Place() {
+  $c_O.call(this);
+  this.name$1 = null;
+  this.imageUrl$1 = null;
+  this.tags$1 = null
+}
+$c_Ldailytours_Place.prototype = new $h_O();
+$c_Ldailytours_Place.prototype.constructor = $c_Ldailytours_Place;
+/** @constructor */
+function $h_Ldailytours_Place() {
+  /*<skip>*/
+}
+$h_Ldailytours_Place.prototype = $c_Ldailytours_Place.prototype;
+$c_Ldailytours_Place.prototype.productPrefix__T = (function() {
+  return "Place"
+});
+$c_Ldailytours_Place.prototype.productArity__I = (function() {
+  return 3
+});
+$c_Ldailytours_Place.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Ldailytours_Place(x$1)) {
+    var Place$1 = $as_Ldailytours_Place(x$1);
+    if ((this.name$1 === Place$1.name$1)) {
+      var x = this.imageUrl$1;
+      var x$2 = Place$1.imageUrl$1;
+      var jsx$1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      var jsx$1 = false
+    };
+    if (jsx$1) {
+      var x$3 = this.tags$1;
+      var x$4 = Place$1.tags$1;
+      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Ldailytours_Place.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.name$1;
+      break
+    }
+    case 1: {
+      return this.imageUrl$1;
+      break
+    }
+    case 2: {
+      return this.tags$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Ldailytours_Place.prototype.init___T__s_Option__sci_List = (function(name, imageUrl, tags) {
+  this.name$1 = name;
+  this.imageUrl$1 = imageUrl;
+  this.tags$1 = tags;
+  return this
+});
+$c_Ldailytours_Place.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Ldailytours_Place.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Ldailytours_Place.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Ldailytours_Place(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Ldailytours_Place)))
+}
+function $as_Ldailytours_Place(obj) {
+  return (($is_Ldailytours_Place(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "dailytours.Place"))
+}
+function $isArrayOf_Ldailytours_Place(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ldailytours_Place)))
+}
+function $asArrayOf_Ldailytours_Place(obj, depth) {
+  return (($isArrayOf_Ldailytours_Place(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ldailytours.Place;", depth))
+}
+var $d_Ldailytours_Place = new $TypeData().initClass({
+  Ldailytours_Place: 0
+}, false, "dailytours.Place", {
+  Ldailytours_Place: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ldailytours_Place.prototype.$classData = $d_Ldailytours_Place;
+/** @constructor */
+function $c_Ldailytours_Tour() {
+  $c_O.call(this);
+  this.name$1 = null;
+  this.events$1 = null;
+  this.author$1 = null
+}
+$c_Ldailytours_Tour.prototype = new $h_O();
+$c_Ldailytours_Tour.prototype.constructor = $c_Ldailytours_Tour;
+/** @constructor */
+function $h_Ldailytours_Tour() {
+  /*<skip>*/
+}
+$h_Ldailytours_Tour.prototype = $c_Ldailytours_Tour.prototype;
+$c_Ldailytours_Tour.prototype.productPrefix__T = (function() {
+  return "Tour"
+});
+$c_Ldailytours_Tour.prototype.init___T__sci_List__Ldailytours_Author = (function(name, events, author) {
+  this.name$1 = name;
+  this.events$1 = events;
+  this.author$1 = author;
+  return this
+});
+$c_Ldailytours_Tour.prototype.productArity__I = (function() {
+  return 3
+});
+$c_Ldailytours_Tour.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Ldailytours_Tour(x$1)) {
+    var Tour$1 = $as_Ldailytours_Tour(x$1);
+    if ((this.name$1 === Tour$1.name$1)) {
+      var x = this.events$1;
+      var x$2 = Tour$1.events$1;
+      var jsx$1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      var jsx$1 = false
+    };
+    if (jsx$1) {
+      var x$3 = this.author$1;
+      var x$4 = Tour$1.author$1;
+      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Ldailytours_Tour.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.name$1;
+      break
+    }
+    case 1: {
+      return this.events$1;
+      break
+    }
+    case 2: {
+      return this.author$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Ldailytours_Tour.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Ldailytours_Tour.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Ldailytours_Tour.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Ldailytours_Tour(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Ldailytours_Tour)))
+}
+function $as_Ldailytours_Tour(obj) {
+  return (($is_Ldailytours_Tour(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "dailytours.Tour"))
+}
+function $isArrayOf_Ldailytours_Tour(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ldailytours_Tour)))
+}
+function $asArrayOf_Ldailytours_Tour(obj, depth) {
+  return (($isArrayOf_Ldailytours_Tour(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ldailytours.Tour;", depth))
+}
+var $d_Ldailytours_Tour = new $TypeData().initClass({
+  Ldailytours_Tour: 0
+}, false, "dailytours.Tour", {
+  Ldailytours_Tour: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ldailytours_Tour.prototype.$classData = $d_Ldailytours_Tour;
 /** @constructor */
 function $c_Ljava_io_FilterOutputStream() {
   $c_Ljava_io_OutputStream.call(this);
@@ -19140,6 +20372,67 @@ var $d_Lmonix_reactive_observers_SafeSubscriber = new $TypeData().initClass({
 });
 $c_Lmonix_reactive_observers_SafeSubscriber.prototype.$classData = $d_Lmonix_reactive_observers_SafeSubscriber;
 /** @constructor */
+function $c_Lmonix_reactive_observers_Subscriber$Implementation() {
+  $c_O.call(this);
+  this.underlying$1 = null;
+  this.scheduler$1 = null
+}
+$c_Lmonix_reactive_observers_Subscriber$Implementation.prototype = new $h_O();
+$c_Lmonix_reactive_observers_Subscriber$Implementation.prototype.constructor = $c_Lmonix_reactive_observers_Subscriber$Implementation;
+/** @constructor */
+function $h_Lmonix_reactive_observers_Subscriber$Implementation() {
+  /*<skip>*/
+}
+$h_Lmonix_reactive_observers_Subscriber$Implementation.prototype = $c_Lmonix_reactive_observers_Subscriber$Implementation.prototype;
+$c_Lmonix_reactive_observers_Subscriber$Implementation.prototype.scheduler__Lmonix_execution_Scheduler = (function() {
+  return this.scheduler$1
+});
+$c_Lmonix_reactive_observers_Subscriber$Implementation.prototype.onNext__O__s_concurrent_Future = (function(elem) {
+  return this.underlying$1.onNext__O__s_concurrent_Future(elem)
+});
+$c_Lmonix_reactive_observers_Subscriber$Implementation.prototype.init___Lmonix_reactive_Observer__Lmonix_execution_Scheduler = (function(underlying, scheduler) {
+  this.underlying$1 = underlying;
+  this.scheduler$1 = scheduler;
+  var requirement = (underlying !== null);
+  if ((!requirement)) {
+    throw new $c_jl_IllegalArgumentException().init___T("requirement failed: Observer should not be null")
+  };
+  var requirement$1 = (scheduler !== null);
+  if ((!requirement$1)) {
+    throw new $c_jl_IllegalArgumentException().init___T("requirement failed: Scheduler should not be null")
+  };
+  return this
+});
+$c_Lmonix_reactive_observers_Subscriber$Implementation.prototype.onComplete__V = (function() {
+  this.underlying$1.onComplete__V()
+});
+$c_Lmonix_reactive_observers_Subscriber$Implementation.prototype.onError__jl_Throwable__V = (function(ex) {
+  this.underlying$1.onError__jl_Throwable__V(ex)
+});
+var $d_Lmonix_reactive_observers_Subscriber$Implementation = new $TypeData().initClass({
+  Lmonix_reactive_observers_Subscriber$Implementation: 0
+}, false, "monix.reactive.observers.Subscriber$Implementation", {
+  Lmonix_reactive_observers_Subscriber$Implementation: 1,
+  O: 1,
+  Lmonix_reactive_observers_Subscriber: 1,
+  Lmonix_reactive_Observer: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lmonix_reactive_observers_Subscriber$Implementation.prototype.$classData = $d_Lmonix_reactive_observers_Subscriber$Implementation;
+function $is_Lmonix_reactive_observers_Subscriber$Sync(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lmonix_reactive_observers_Subscriber$Sync)))
+}
+function $as_Lmonix_reactive_observers_Subscriber$Sync(obj) {
+  return (($is_Lmonix_reactive_observers_Subscriber$Sync(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "monix.reactive.observers.Subscriber$Sync"))
+}
+function $isArrayOf_Lmonix_reactive_observers_Subscriber$Sync(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmonix_reactive_observers_Subscriber$Sync)))
+}
+function $asArrayOf_Lmonix_reactive_observers_Subscriber$Sync(obj, depth) {
+  return (($isArrayOf_Lmonix_reactive_observers_Subscriber$Sync(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmonix.reactive.observers.Subscriber$Sync;", depth))
+}
+/** @constructor */
 function $c_Lmonix_reactive_subjects_BehaviorSubject$State() {
   $c_O.call(this);
   this.cached$1 = null;
@@ -19223,6 +20516,11 @@ $c_Lmonix_reactive_subjects_BehaviorSubject$State.prototype.init___O__sci_Set__Z
   this.errorThrown$1 = errorThrown;
   return this
 });
+$c_Lmonix_reactive_subjects_BehaviorSubject$State.prototype.markDone__jl_Throwable__Lmonix_reactive_subjects_BehaviorSubject$State = (function(ex) {
+  var x$10 = $m_sci_Set$EmptySet$();
+  var x$13 = this.cached$1;
+  return new $c_Lmonix_reactive_subjects_BehaviorSubject$State().init___O__sci_Set__Z__jl_Throwable(x$13, x$10, true, ex)
+});
 $c_Lmonix_reactive_subjects_BehaviorSubject$State.prototype.hashCode__I = (function() {
   var acc = (-889275714);
   acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.cached$1));
@@ -19264,6 +20562,114 @@ var $d_Lmonix_reactive_subjects_BehaviorSubject$State = new $TypeData().initClas
   Ljava_io_Serializable: 1
 });
 $c_Lmonix_reactive_subjects_BehaviorSubject$State.prototype.$classData = $d_Lmonix_reactive_subjects_BehaviorSubject$State;
+/** @constructor */
+function $c_Lmonix_reactive_subjects_PublishSubject$State() {
+  $c_O.call(this);
+  this.subscribers$1 = null;
+  this.cache$1 = null;
+  this.errorThrown$1 = null
+}
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype = new $h_O();
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.constructor = $c_Lmonix_reactive_subjects_PublishSubject$State;
+/** @constructor */
+function $h_Lmonix_reactive_subjects_PublishSubject$State() {
+  /*<skip>*/
+}
+$h_Lmonix_reactive_subjects_PublishSubject$State.prototype = $c_Lmonix_reactive_subjects_PublishSubject$State.prototype;
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.productPrefix__T = (function() {
+  return "State"
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.productArity__I = (function() {
+  return 3
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.init___sci_Set__ALmonix_reactive_observers_Subscriber__jl_Throwable = (function(subscribers, cache, errorThrown) {
+  this.subscribers$1 = subscribers;
+  this.cache$1 = cache;
+  this.errorThrown$1 = errorThrown;
+  return this
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lmonix_reactive_subjects_PublishSubject$State(x$1)) {
+    var State$1 = $as_Lmonix_reactive_subjects_PublishSubject$State(x$1);
+    var x = this.subscribers$1;
+    var x$2 = State$1.subscribers$1;
+    if ((((x === null) ? (x$2 === null) : $f_sc_GenSetLike__equals__O__Z(x, x$2)) && (this.cache$1 === State$1.cache$1))) {
+      var x$3 = this.errorThrown$1;
+      var x$4 = State$1.errorThrown$1;
+      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.subscribers$1;
+      break
+    }
+    case 1: {
+      return this.cache$1;
+      break
+    }
+    case 2: {
+      return this.errorThrown$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.complete__jl_Throwable__Lmonix_reactive_subjects_PublishSubject$State = (function(errorThrown) {
+  return ((this.subscribers$1 === null) ? this : new $c_Lmonix_reactive_subjects_PublishSubject$State().init___sci_Set__ALmonix_reactive_observers_Subscriber__jl_Throwable(null, null, errorThrown))
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.refresh__Lmonix_reactive_subjects_PublishSubject$State = (function() {
+  var this$2 = this.subscribers$1;
+  var len = this$2.size__I();
+  var result = $newArrayObject($d_Lmonix_reactive_observers_Subscriber.getArrayOf(), [len]);
+  $f_sc_TraversableOnce__copyToArray__O__I__V(this$2, result, 0);
+  var x$2 = this.subscribers$1;
+  var x$3 = this.errorThrown$1;
+  return new $c_Lmonix_reactive_subjects_PublishSubject$State().init___sci_Set__ALmonix_reactive_observers_Subscriber__jl_Throwable(x$2, result, x$3)
+});
+function $is_Lmonix_reactive_subjects_PublishSubject$State(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lmonix_reactive_subjects_PublishSubject$State)))
+}
+function $as_Lmonix_reactive_subjects_PublishSubject$State(obj) {
+  return (($is_Lmonix_reactive_subjects_PublishSubject$State(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "monix.reactive.subjects.PublishSubject$State"))
+}
+function $isArrayOf_Lmonix_reactive_subjects_PublishSubject$State(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmonix_reactive_subjects_PublishSubject$State)))
+}
+function $asArrayOf_Lmonix_reactive_subjects_PublishSubject$State(obj, depth) {
+  return (($isArrayOf_Lmonix_reactive_subjects_PublishSubject$State(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmonix.reactive.subjects.PublishSubject$State;", depth))
+}
+var $d_Lmonix_reactive_subjects_PublishSubject$State = new $TypeData().initClass({
+  Lmonix_reactive_subjects_PublishSubject$State: 0
+}, false, "monix.reactive.subjects.PublishSubject$State", {
+  Lmonix_reactive_subjects_PublishSubject$State: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lmonix_reactive_subjects_PublishSubject$State.prototype.$classData = $d_Lmonix_reactive_subjects_PublishSubject$State;
 /** @constructor */
 function $c_Lmonix_reactive_subjects_Subject() {
   $c_Lmonix_reactive_Observable.call(this)
@@ -19351,6 +20757,88 @@ var $d_Lologwebsite_Address = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lologwebsite_Address.prototype.$classData = $d_Lologwebsite_Address;
+/** @constructor */
+function $c_Lologwebsite_Avatar() {
+  $c_O.call(this);
+  this.url$1 = null;
+  this.name$1 = null
+}
+$c_Lologwebsite_Avatar.prototype = new $h_O();
+$c_Lologwebsite_Avatar.prototype.constructor = $c_Lologwebsite_Avatar;
+/** @constructor */
+function $h_Lologwebsite_Avatar() {
+  /*<skip>*/
+}
+$h_Lologwebsite_Avatar.prototype = $c_Lologwebsite_Avatar.prototype;
+$c_Lologwebsite_Avatar.prototype.init___T__T = (function(url, name) {
+  this.url$1 = url;
+  this.name$1 = name;
+  return this
+});
+$c_Lologwebsite_Avatar.prototype.productPrefix__T = (function() {
+  return "Avatar"
+});
+$c_Lologwebsite_Avatar.prototype.productArity__I = (function() {
+  return 2
+});
+$c_Lologwebsite_Avatar.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lologwebsite_Avatar(x$1)) {
+    var Avatar$1 = $as_Lologwebsite_Avatar(x$1);
+    return ((this.url$1 === Avatar$1.url$1) && (this.name$1 === Avatar$1.name$1))
+  } else {
+    return false
+  }
+});
+$c_Lologwebsite_Avatar.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.url$1;
+      break
+    }
+    case 1: {
+      return this.name$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lologwebsite_Avatar.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lologwebsite_Avatar.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lologwebsite_Avatar.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Lologwebsite_Avatar(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lologwebsite_Avatar)))
+}
+function $as_Lologwebsite_Avatar(obj) {
+  return (($is_Lologwebsite_Avatar(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "ologwebsite.Avatar"))
+}
+function $isArrayOf_Lologwebsite_Avatar(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lologwebsite_Avatar)))
+}
+function $asArrayOf_Lologwebsite_Avatar(obj, depth) {
+  return (($isArrayOf_Lologwebsite_Avatar(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lologwebsite.Avatar;", depth))
+}
+var $d_Lologwebsite_Avatar = new $TypeData().initClass({
+  Lologwebsite_Avatar: 0
+}, false, "ologwebsite.Avatar", {
+  Lologwebsite_Avatar: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lologwebsite_Avatar.prototype.$classData = $d_Lologwebsite_Avatar;
 /** @constructor */
 function $c_Lologwebsite_Location() {
   $c_O.call(this);
@@ -19446,7 +20934,8 @@ function $c_Lologwebsite_Me() {
   $c_O.call(this);
   this.name$1 = null;
   this.born$1 = null;
-  this.attended$1 = null
+  this.attended$1 = null;
+  this.avatars$1 = null
 }
 $c_Lologwebsite_Me.prototype = new $h_O();
 $c_Lologwebsite_Me.prototype.constructor = $c_Lologwebsite_Me;
@@ -19459,7 +20948,7 @@ $c_Lologwebsite_Me.prototype.productPrefix__T = (function() {
   return "Me"
 });
 $c_Lologwebsite_Me.prototype.productArity__I = (function() {
-  return 3
+  return 4
 });
 $c_Lologwebsite_Me.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
@@ -19469,14 +20958,21 @@ $c_Lologwebsite_Me.prototype.equals__O__Z = (function(x$1) {
     if ((this.name$1 === Me$1.name$1)) {
       var x = this.born$1;
       var x$2 = Me$1.born$1;
-      var jsx$1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      var jsx$2 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      var jsx$2 = false
+    };
+    if (jsx$2) {
+      var x$3 = this.attended$1;
+      var x$4 = Me$1.attended$1;
+      var jsx$1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
     } else {
       var jsx$1 = false
     };
     if (jsx$1) {
-      var x$3 = this.attended$1;
-      var x$4 = Me$1.attended$1;
-      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      var x$5 = this.avatars$1;
+      var x$6 = Me$1.avatars$1;
+      return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
     } else {
       return false
     }
@@ -19498,6 +20994,10 @@ $c_Lologwebsite_Me.prototype.productElement__I__O = (function(x$1) {
       return this.attended$1;
       break
     }
+    case 3: {
+      return this.avatars$1;
+      break
+    }
     default: {
       throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
     }
@@ -19513,10 +21013,11 @@ $c_Lologwebsite_Me.prototype.hashCode__I = (function() {
 $c_Lologwebsite_Me.prototype.productIterator__sc_Iterator = (function() {
   return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
 });
-$c_Lologwebsite_Me.prototype.init___T__Lologwebsite_Location__sci_List = (function(name, born, attended) {
+$c_Lologwebsite_Me.prototype.init___T__Lologwebsite_Location__sci_List__sci_List = (function(name, born, attended, avatars) {
   this.name$1 = name;
   this.born$1 = born;
   this.attended$1 = attended;
+  this.avatars$1 = avatars;
   return this
 });
 function $is_Lologwebsite_Me(obj) {
@@ -25051,6 +26552,33 @@ $c_Lmonix_reactive_subjects_BehaviorSubject.prototype.removeSubscriber__p3__Lmon
     break
   }
 });
+$c_Lmonix_reactive_subjects_BehaviorSubject.prototype.onCompleteOrError__p3__jl_Throwable__V = (function(ex) {
+  _onCompleteOrError: while (true) {
+    var state = $as_Lmonix_reactive_subjects_BehaviorSubject$State(this.stateRef$3.ref$2);
+    if ((!state.isDone$1)) {
+      if ((!this.stateRef$3.compareAndSet__O__O__Z(state, state.markDone__jl_Throwable__Lmonix_reactive_subjects_BehaviorSubject$State(ex)))) {
+        continue _onCompleteOrError
+      } else {
+        var iterator = state.subscribers$1.iterator__sc_Iterator();
+        while (iterator.hasNext__Z()) {
+          var ref = $as_Lmonix_reactive_observers_ConnectableSubscriber(iterator.next__O());
+          if ((ex !== null)) {
+            ref.onError__jl_Throwable__V(ex)
+          } else {
+            ref.onComplete__V()
+          }
+        }
+      }
+    };
+    break
+  }
+});
+$c_Lmonix_reactive_subjects_BehaviorSubject.prototype.onComplete__V = (function() {
+  this.onCompleteOrError__p3__jl_Throwable__V(null)
+});
+$c_Lmonix_reactive_subjects_BehaviorSubject.prototype.onError__jl_Throwable__V = (function(ex) {
+  this.onCompleteOrError__p3__jl_Throwable__V(ex)
+});
 $c_Lmonix_reactive_subjects_BehaviorSubject.prototype.unsafeSubscribeFn__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Cancelable = (function(subscriber) {
   _unsafeSubscribeFn: while (true) {
     var state = $as_Lmonix_reactive_subjects_BehaviorSubject$State(this.stateRef$3.ref$2);
@@ -25123,6 +26651,189 @@ var $d_Lmonix_reactive_subjects_BehaviorSubject = new $TypeData().initClass({
   Lmonix_reactive_Observer: 1
 });
 $c_Lmonix_reactive_subjects_BehaviorSubject.prototype.$classData = $d_Lmonix_reactive_subjects_BehaviorSubject;
+/** @constructor */
+function $c_Lmonix_reactive_subjects_PublishSubject() {
+  $c_Lmonix_reactive_subjects_Subject.call(this);
+  this.stateRef$3 = null
+}
+$c_Lmonix_reactive_subjects_PublishSubject.prototype = new $h_Lmonix_reactive_subjects_Subject();
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.constructor = $c_Lmonix_reactive_subjects_PublishSubject;
+/** @constructor */
+function $h_Lmonix_reactive_subjects_PublishSubject() {
+  /*<skip>*/
+}
+$h_Lmonix_reactive_subjects_PublishSubject.prototype = $c_Lmonix_reactive_subjects_PublishSubject.prototype;
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.init___ = (function() {
+  var this$1 = $m_Lmonix_execution_atomic_AtomicBuilder$();
+  new $c_Lmonix_execution_atomic_Implicits$Level1$$anon$1().init___Lmonix_execution_atomic_Implicits$Level1(this$1);
+  var initialValue = new $c_Lmonix_reactive_subjects_PublishSubject$State().init___sci_Set__ALmonix_reactive_observers_Subscriber__jl_Throwable($m_sci_Set$EmptySet$(), null, null);
+  this.stateRef$3 = new $c_Lmonix_execution_atomic_AtomicAny().init___O(initialValue);
+  return this
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.sendOnNextToAll__p3__ALmonix_reactive_observers_Subscriber__O__s_concurrent_Future = (function(subscribers, elem) {
+  var result = new $c_sr_ObjectRef().init___O(null);
+  var index = 0;
+  while ((index < subscribers.u.length)) {
+    var subscriber = subscribers.get(index);
+    index = ((1 + index) | 0);
+    try {
+      var ack = subscriber.onNext__O__s_concurrent_Future(elem)
+    } catch (e) {
+      var e$2 = $m_sjsr_package$().wrapJavaScriptException__O__jl_Throwable(e);
+      if ((e$2 !== null)) {
+        if ($m_Lmonix_execution_misc_NonFatal$().apply__jl_Throwable__Z(e$2)) {
+          var ack = $m_s_concurrent_Future$().failed__jl_Throwable__s_concurrent_Future(e$2)
+        } else {
+          var ack;
+          throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(e$2)
+        }
+      } else {
+        var ack;
+        throw e
+      }
+    };
+    if (ack.isCompleted__Z()) {
+      var x$2 = $m_Lmonix_execution_Ack$Continue$();
+      if ((!((ack !== null) && ack.equals__O__Z(x$2)))) {
+        var x$3 = ack.value__s_Option().get__O();
+        var x$4 = $m_Lmonix_execution_Ack$Continue$().AsSuccess$2;
+        var jsx$1 = (!((x$3 === null) ? (x$4 === null) : $objectEquals(x$3, x$4)))
+      } else {
+        var jsx$1 = false
+      };
+      if (jsx$1) {
+        this.unsubscribe__p3__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Ack(subscriber)
+      }
+    } else {
+      if (($as_Lmonix_reactive_internal_util_PromiseCounter(result.elem$1) === null)) {
+        var value = $m_Lmonix_execution_Ack$Continue$();
+        result.elem$1 = new $c_Lmonix_reactive_internal_util_PromiseCounter().init___O__I(value, 1)
+      };
+      $as_Lmonix_reactive_internal_util_PromiseCounter(result.elem$1).acquire__V();
+      ack.onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, result$1, subscriber$1) {
+        return (function(x0$1$2) {
+          var x0$1 = $as_s_util_Try(x0$1$2);
+          var x = $m_Lmonix_execution_Ack$Continue$().AsSuccess$2;
+          if (((x === null) ? (x0$1 === null) : x.equals__O__Z(x0$1))) {
+            $as_Lmonix_reactive_internal_util_PromiseCounter(result$1.elem$1).countdown__V()
+          } else {
+            $this.unsubscribe__p3__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Ack(subscriber$1);
+            $as_Lmonix_reactive_internal_util_PromiseCounter(result$1.elem$1).countdown__V()
+          }
+        })
+      })(this, result, subscriber)), subscriber.scheduler__Lmonix_execution_Scheduler())
+    }
+  };
+  return (($as_Lmonix_reactive_internal_util_PromiseCounter(result.elem$1) === null) ? $m_Lmonix_execution_Ack$Continue$() : ($as_Lmonix_reactive_internal_util_PromiseCounter(result.elem$1).countdown__V(), $as_Lmonix_reactive_internal_util_PromiseCounter(result.elem$1).future__s_concurrent_Future()))
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.onNext__O__s_concurrent_Future = (function(elem) {
+  var state = $as_Lmonix_reactive_subjects_PublishSubject$State(this.stateRef$3.ref$2);
+  var subscribersArray = state.cache$1;
+  if ((subscribersArray === null)) {
+    var set = state.subscribers$1;
+    if ((set === null)) {
+      return $m_Lmonix_execution_Ack$Stop$()
+    } else {
+      var update = state.refresh__Lmonix_reactive_subjects_PublishSubject$State();
+      this.stateRef$3.compareAndSet__O__O__Z(state, update);
+      return this.sendOnNextToAll__p3__ALmonix_reactive_observers_Subscriber__O__s_concurrent_Future(update.cache$1, elem)
+    }
+  } else {
+    return this.sendOnNextToAll__p3__ALmonix_reactive_observers_Subscriber__O__s_concurrent_Future(subscribersArray, elem)
+  }
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.onSubscribeCompleted__p3__Lmonix_reactive_observers_Subscriber__jl_Throwable__Lmonix_execution_Cancelable = (function(subscriber, ex) {
+  if ((ex !== null)) {
+    subscriber.onError__jl_Throwable__V(ex)
+  } else {
+    subscriber.onComplete__V()
+  };
+  return $m_Lmonix_execution_Cancelable$().empty$1
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.unsubscribe__p3__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Ack = (function(subscriber) {
+  _unsubscribe: while (true) {
+    var state = $as_Lmonix_reactive_subjects_PublishSubject$State(this.stateRef$3.ref$2);
+    var subscribers = state.subscribers$1;
+    if ((subscribers === null)) {
+      return $m_Lmonix_execution_Ack$Continue$()
+    } else {
+      var update = new $c_Lmonix_reactive_subjects_PublishSubject$State().init___sci_Set__ALmonix_reactive_observers_Subscriber__jl_Throwable($as_sci_Set(subscribers.$$minus__O__sc_Set(subscriber)), null, null);
+      if ((!this.stateRef$3.compareAndSet__O__O__Z(state, update))) {
+        continue _unsubscribe
+      } else {
+        return $m_Lmonix_execution_Ack$Continue$()
+      }
+    }
+  }
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.onComplete__V = (function() {
+  this.sendOnCompleteOrError__p3__jl_Throwable__V(null)
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.sendOnCompleteOrError__p3__jl_Throwable__V = (function(ex) {
+  _sendOnCompleteOrError: while (true) {
+    var state = $as_Lmonix_reactive_subjects_PublishSubject$State(this.stateRef$3.ref$2);
+    var set = state.subscribers$1;
+    if ((state.cache$1 !== null)) {
+      var xs = state.cache$1;
+      var subscribers = new $c_scm_WrappedArray$ofRef().init___AO(xs)
+    } else {
+      var subscribers = set
+    };
+    if ((subscribers !== null)) {
+      if ((!this.stateRef$3.compareAndSet__O__O__Z(state, state.complete__jl_Throwable__Lmonix_reactive_subjects_PublishSubject$State(ex)))) {
+        continue _sendOnCompleteOrError
+      } else {
+        var iterator = set.iterator__sc_Iterator();
+        while (iterator.hasNext__Z()) {
+          var ref = $as_Lmonix_reactive_observers_Subscriber(iterator.next__O());
+          if ((ex !== null)) {
+            ref.onError__jl_Throwable__V(ex)
+          } else {
+            ref.onComplete__V()
+          }
+        }
+      }
+    };
+    break
+  }
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.onError__jl_Throwable__V = (function(ex) {
+  this.sendOnCompleteOrError__p3__jl_Throwable__V(ex)
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.unsafeSubscribeFn__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Cancelable = (function(subscriber) {
+  _unsafeSubscribeFn: while (true) {
+    var state = $as_Lmonix_reactive_subjects_PublishSubject$State(this.stateRef$3.ref$2);
+    var subscribers = state.subscribers$1;
+    if ((subscribers === null)) {
+      return this.onSubscribeCompleted__p3__Lmonix_reactive_observers_Subscriber__jl_Throwable__Lmonix_execution_Cancelable(subscriber, state.errorThrown$1)
+    } else {
+      var update = new $c_Lmonix_reactive_subjects_PublishSubject$State().init___sci_Set__ALmonix_reactive_observers_Subscriber__jl_Throwable($as_sci_Set(subscribers.$$plus__O__sc_Set(subscriber)), null, null);
+      if ((!this.stateRef$3.compareAndSet__O__O__Z(state, update))) {
+        continue _unsafeSubscribeFn
+      } else {
+        $m_Lmonix_execution_Cancelable$();
+        var callback = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this, subscriber$1) {
+          return (function() {
+            $this.unsubscribe__p3__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Ack(subscriber$1)
+          })
+        })(this, subscriber));
+        return new $c_Lmonix_execution_Cancelable$CancelableTask().init___F0(callback)
+      }
+    }
+  }
+});
+var $d_Lmonix_reactive_subjects_PublishSubject = new $TypeData().initClass({
+  Lmonix_reactive_subjects_PublishSubject: 0
+}, false, "monix.reactive.subjects.PublishSubject", {
+  Lmonix_reactive_subjects_PublishSubject: 1,
+  Lmonix_reactive_subjects_Subject: 1,
+  Lmonix_reactive_Observable: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1,
+  Lmonix_reactive_Observer: 1
+});
+$c_Lmonix_reactive_subjects_PublishSubject.prototype.$classData = $d_Lmonix_reactive_subjects_PublishSubject;
 function $is_Loutwatch_dom_AttributeStreamReceiver(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_dom_AttributeStreamReceiver)))
 }
@@ -25214,6 +26925,71 @@ var $d_Loutwatch_dom_CompositeModifier = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Loutwatch_dom_CompositeModifier.prototype.$classData = $d_Loutwatch_dom_CompositeModifier;
+/** @constructor */
+function $c_Loutwatch_dom_Emitter() {
+  $c_O.call(this);
+  this.eventType$1 = null;
+  this.trigger$1 = null
+}
+$c_Loutwatch_dom_Emitter.prototype = new $h_O();
+$c_Loutwatch_dom_Emitter.prototype.constructor = $c_Loutwatch_dom_Emitter;
+/** @constructor */
+function $h_Loutwatch_dom_Emitter() {
+  /*<skip>*/
+}
+$h_Loutwatch_dom_Emitter.prototype = $c_Loutwatch_dom_Emitter.prototype;
+$c_Loutwatch_dom_Emitter.prototype.productPrefix__T = (function() {
+  return "Emitter"
+});
+$c_Loutwatch_dom_Emitter.prototype.productArity__I = (function() {
+  return 2
+});
+$c_Loutwatch_dom_Emitter.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Loutwatch_dom_Emitter(x$1)) {
+    var Emitter$1 = $as_Loutwatch_dom_Emitter(x$1);
+    if ((this.eventType$1 === Emitter$1.eventType$1)) {
+      var x = this.trigger$1;
+      var x$2 = Emitter$1.trigger$1;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Loutwatch_dom_Emitter.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.eventType$1;
+      break
+    }
+    case 1: {
+      return this.trigger$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Loutwatch_dom_Emitter.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Loutwatch_dom_Emitter.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Loutwatch_dom_Emitter.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+$c_Loutwatch_dom_Emitter.prototype.init___T__F1 = (function(eventType, trigger) {
+  this.eventType$1 = eventType;
+  this.trigger$1 = trigger;
+  return this
+});
 function $is_Loutwatch_dom_Emitter(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_dom_Emitter)))
 }
@@ -25226,6 +27002,18 @@ function $isArrayOf_Loutwatch_dom_Emitter(obj, depth) {
 function $asArrayOf_Loutwatch_dom_Emitter(obj, depth) {
   return (($isArrayOf_Loutwatch_dom_Emitter(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.dom.Emitter;", depth))
 }
+var $d_Loutwatch_dom_Emitter = new $TypeData().initClass({
+  Loutwatch_dom_Emitter: 0
+}, false, "outwatch.dom.Emitter", {
+  Loutwatch_dom_Emitter: 1,
+  O: 1,
+  Loutwatch_dom_VDomModifier$und: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Loutwatch_dom_Emitter.prototype.$classData = $d_Loutwatch_dom_Emitter;
 /** @constructor */
 function $c_Loutwatch_dom_EmptyModifier$() {
   $c_O.call(this)
@@ -26360,6 +28148,68 @@ var $d_Loutwatch_dom_helpers_SeparatedStyles = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Loutwatch_dom_helpers_SeparatedStyles.prototype.$classData = $d_Loutwatch_dom_helpers_SeparatedStyles;
+/** @constructor */
+function $c_Loutwatch_dom_helpers_SimpleEmitterBuilder() {
+  $c_O.call(this);
+  this.create$1 = null
+}
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype = new $h_O();
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.constructor = $c_Loutwatch_dom_helpers_SimpleEmitterBuilder;
+/** @constructor */
+function $h_Loutwatch_dom_helpers_SimpleEmitterBuilder() {
+  /*<skip>*/
+}
+$h_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype = $c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype;
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.productPrefix__T = (function() {
+  return "SimpleEmitterBuilder"
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.equals__O__Z = (function(x$1) {
+  return $m_Loutwatch_dom_helpers_SimpleEmitterBuilder$().equals$extension__F1__O__Z(this.create$1, x$1)
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.productElement__I__O = (function(x$1) {
+  return $m_Loutwatch_dom_helpers_SimpleEmitterBuilder$().productElement$extension__F1__I__O(this.create$1, x$1)
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.toString__T = (function() {
+  return $m_Loutwatch_dom_helpers_SimpleEmitterBuilder$().toString$extension__F1__T(this.create$1)
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.init___F1 = (function(create) {
+  this.create$1 = create;
+  return this
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.hashCode__I = (function() {
+  var $$this = this.create$1;
+  return $$this.hashCode__I()
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.productIterator__sc_Iterator = (function() {
+  return $m_Loutwatch_dom_helpers_SimpleEmitterBuilder$().productIterator$extension__F1__sc_Iterator(this.create$1)
+});
+function $is_Loutwatch_dom_helpers_SimpleEmitterBuilder(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_dom_helpers_SimpleEmitterBuilder)))
+}
+function $as_Loutwatch_dom_helpers_SimpleEmitterBuilder(obj) {
+  return (($is_Loutwatch_dom_helpers_SimpleEmitterBuilder(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "outwatch.dom.helpers.SimpleEmitterBuilder"))
+}
+function $isArrayOf_Loutwatch_dom_helpers_SimpleEmitterBuilder(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Loutwatch_dom_helpers_SimpleEmitterBuilder)))
+}
+function $asArrayOf_Loutwatch_dom_helpers_SimpleEmitterBuilder(obj, depth) {
+  return (($isArrayOf_Loutwatch_dom_helpers_SimpleEmitterBuilder(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.dom.helpers.SimpleEmitterBuilder;", depth))
+}
+var $d_Loutwatch_dom_helpers_SimpleEmitterBuilder = new $TypeData().initClass({
+  Loutwatch_dom_helpers_SimpleEmitterBuilder: 0
+}, false, "outwatch.dom.helpers.SimpleEmitterBuilder", {
+  Loutwatch_dom_helpers_SimpleEmitterBuilder: 1,
+  O: 1,
+  Loutwatch_dom_helpers_EmitterBuilder: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Loutwatch_dom_helpers_SimpleEmitterBuilder.prototype.$classData = $d_Loutwatch_dom_helpers_SimpleEmitterBuilder;
 /** @constructor */
 function $c_Loutwatch_dom_helpers_SnabbdomModifiers$$anonfun$1() {
   $c_sr_AbstractPartialFunction.call(this);
@@ -28641,6 +30491,232 @@ var $d_Lmonix_execution_cancelables_SingleAssignCancelable = new $TypeData().ini
 });
 $c_Lmonix_execution_cancelables_SingleAssignCancelable.prototype.$classData = $d_Lmonix_execution_cancelables_SingleAssignCancelable;
 /** @constructor */
+function $c_Lmonix_reactive_observers_Subscriber$SyncImplementation() {
+  $c_O.call(this);
+  this.observer$1 = null;
+  this.scheduler$1 = null
+}
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype = new $h_O();
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype.constructor = $c_Lmonix_reactive_observers_Subscriber$SyncImplementation;
+/** @constructor */
+function $h_Lmonix_reactive_observers_Subscriber$SyncImplementation() {
+  /*<skip>*/
+}
+$h_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype = $c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype;
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype.init___Lmonix_reactive_Observer$Sync__Lmonix_execution_Scheduler = (function(observer, scheduler) {
+  this.observer$1 = observer;
+  this.scheduler$1 = scheduler;
+  var requirement = (observer !== null);
+  if ((!requirement)) {
+    throw new $c_jl_IllegalArgumentException().init___T("requirement failed: Observer should not be null")
+  };
+  var requirement$1 = (scheduler !== null);
+  if ((!requirement$1)) {
+    throw new $c_jl_IllegalArgumentException().init___T("requirement failed: Scheduler should not be null")
+  };
+  return this
+});
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype.scheduler__Lmonix_execution_Scheduler = (function() {
+  return this.scheduler$1
+});
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype.onNext__O__s_concurrent_Future = (function(elem) {
+  return this.onNext__O__Lmonix_execution_Ack(elem)
+});
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype.onNext__O__Lmonix_execution_Ack = (function(elem) {
+  return this.observer$1.onNext__O__Lmonix_execution_Ack(elem)
+});
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype.onComplete__V = (function() {
+  this.observer$1.onComplete__V()
+});
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype.onError__jl_Throwable__V = (function(ex) {
+  this.observer$1.onError__jl_Throwable__V(ex)
+});
+var $d_Lmonix_reactive_observers_Subscriber$SyncImplementation = new $TypeData().initClass({
+  Lmonix_reactive_observers_Subscriber$SyncImplementation: 0
+}, false, "monix.reactive.observers.Subscriber$SyncImplementation", {
+  Lmonix_reactive_observers_Subscriber$SyncImplementation: 1,
+  O: 1,
+  Lmonix_reactive_observers_Subscriber$Sync: 1,
+  Lmonix_reactive_observers_Subscriber: 1,
+  Lmonix_reactive_Observer: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1,
+  Lmonix_reactive_Observer$Sync: 1
+});
+$c_Lmonix_reactive_observers_Subscriber$SyncImplementation.prototype.$classData = $d_Lmonix_reactive_observers_Subscriber$SyncImplementation;
+/** @constructor */
+function $c_Loutwatch_Sink$ObservableSink() {
+  $c_Lmonix_reactive_Observable.call(this);
+  this.oldSink$2 = null;
+  this.stream$2 = null
+}
+$c_Loutwatch_Sink$ObservableSink.prototype = new $h_Lmonix_reactive_Observable();
+$c_Loutwatch_Sink$ObservableSink.prototype.constructor = $c_Loutwatch_Sink$ObservableSink;
+/** @constructor */
+function $h_Loutwatch_Sink$ObservableSink() {
+  /*<skip>*/
+}
+$h_Loutwatch_Sink$ObservableSink.prototype = $c_Loutwatch_Sink$ObservableSink.prototype;
+$c_Loutwatch_Sink$ObservableSink.prototype.productPrefix__T = (function() {
+  return "ObservableSink"
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.productArity__I = (function() {
+  return 2
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Loutwatch_Sink$ObservableSink(x$1)) {
+    var ObservableSink$1 = $as_Loutwatch_Sink$ObservableSink(x$1);
+    var x = this.oldSink$2;
+    var x$2 = ObservableSink$1.oldSink$2;
+    if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
+      var x$3 = this.stream$2;
+      var x$4 = ObservableSink$1.stream$2;
+      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.oldSink$2;
+      break
+    }
+    case 1: {
+      return this.stream$2;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.init___Loutwatch_Sink__Lmonix_reactive_Observable = (function(oldSink, stream) {
+  this.oldSink$2 = oldSink;
+  this.stream$2 = stream;
+  return this
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.unsafeSubscribeFn__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Cancelable = (function(subscriber) {
+  return this.stream$2.unsafeSubscribeFn__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Cancelable(subscriber)
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.observer__Lmonix_reactive_observers_Subscriber = (function() {
+  return this.oldSink$2.observer__Lmonix_reactive_observers_Subscriber()
+});
+function $is_Loutwatch_Sink$ObservableSink(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_Sink$ObservableSink)))
+}
+function $as_Loutwatch_Sink$ObservableSink(obj) {
+  return (($is_Loutwatch_Sink$ObservableSink(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "outwatch.Sink$ObservableSink"))
+}
+function $isArrayOf_Loutwatch_Sink$ObservableSink(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Loutwatch_Sink$ObservableSink)))
+}
+function $asArrayOf_Loutwatch_Sink$ObservableSink(obj, depth) {
+  return (($isArrayOf_Loutwatch_Sink$ObservableSink(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.Sink$ObservableSink;", depth))
+}
+var $d_Loutwatch_Sink$ObservableSink = new $TypeData().initClass({
+  Loutwatch_Sink$ObservableSink: 0
+}, false, "outwatch.Sink$ObservableSink", {
+  Loutwatch_Sink$ObservableSink: 1,
+  Lmonix_reactive_Observable: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1,
+  Loutwatch_Sink: 1,
+  s_Product: 1,
+  s_Equals: 1
+});
+$c_Loutwatch_Sink$ObservableSink.prototype.$classData = $d_Loutwatch_Sink$ObservableSink;
+/** @constructor */
+function $c_Loutwatch_Sink$SubjectSink() {
+  $c_Lmonix_reactive_Observable.call(this);
+  this.scheduler$2 = null;
+  this.subject$2 = null
+}
+$c_Loutwatch_Sink$SubjectSink.prototype = new $h_Lmonix_reactive_Observable();
+$c_Loutwatch_Sink$SubjectSink.prototype.constructor = $c_Loutwatch_Sink$SubjectSink;
+/** @constructor */
+function $h_Loutwatch_Sink$SubjectSink() {
+  /*<skip>*/
+}
+$h_Loutwatch_Sink$SubjectSink.prototype = $c_Loutwatch_Sink$SubjectSink.prototype;
+$c_Loutwatch_Sink$SubjectSink.prototype.productPrefix__T = (function() {
+  return "SubjectSink"
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.productArity__I = (function() {
+  return 0
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.equals__O__Z = (function(x$1) {
+  return $is_Loutwatch_Sink$SubjectSink(x$1)
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.productElement__I__O = (function(x$1) {
+  throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.init___Lmonix_execution_Scheduler = (function(scheduler) {
+  this.scheduler$2 = scheduler;
+  this.subject$2 = new $c_Lmonix_reactive_subjects_PublishSubject().init___();
+  return this
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.observer__Lmonix_reactive_observers_SafeSubscriber = (function() {
+  return $m_Lmonix_reactive_observers_SafeSubscriber$().apply__Lmonix_reactive_observers_Subscriber__Lmonix_reactive_observers_SafeSubscriber($m_Lmonix_reactive_observers_Subscriber$().apply__Lmonix_reactive_Observer__Lmonix_execution_Scheduler__Lmonix_reactive_observers_Subscriber(this.subject$2, this.scheduler$2))
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.unsafeSubscribeFn__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Cancelable = (function(subscriber) {
+  return this.subject$2.unsafeSubscribeFn__Lmonix_reactive_observers_Subscriber__Lmonix_execution_Cancelable(subscriber)
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.observer__Lmonix_reactive_observers_Subscriber = (function() {
+  return this.observer__Lmonix_reactive_observers_SafeSubscriber()
+});
+function $is_Loutwatch_Sink$SubjectSink(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_Sink$SubjectSink)))
+}
+function $as_Loutwatch_Sink$SubjectSink(obj) {
+  return (($is_Loutwatch_Sink$SubjectSink(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "outwatch.Sink$SubjectSink"))
+}
+function $isArrayOf_Loutwatch_Sink$SubjectSink(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Loutwatch_Sink$SubjectSink)))
+}
+function $asArrayOf_Loutwatch_Sink$SubjectSink(obj, depth) {
+  return (($isArrayOf_Loutwatch_Sink$SubjectSink(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.Sink$SubjectSink;", depth))
+}
+var $d_Loutwatch_Sink$SubjectSink = new $TypeData().initClass({
+  Loutwatch_Sink$SubjectSink: 0
+}, false, "outwatch.Sink$SubjectSink", {
+  Loutwatch_Sink$SubjectSink: 1,
+  Lmonix_reactive_Observable: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1,
+  Loutwatch_Sink: 1,
+  s_Product: 1,
+  s_Equals: 1
+});
+$c_Loutwatch_Sink$SubjectSink.prototype.$classData = $d_Loutwatch_Sink$SubjectSink;
+/** @constructor */
 function $c_Loutwatch_dom_ChildStreamReceiver() {
   $c_O.call(this);
   this.childStream$1 = null
@@ -28665,7 +30741,7 @@ $c_Loutwatch_dom_ChildStreamReceiver.prototype.equals__O__Z = (function(x$1) {
     var ChildStreamReceiver$1 = $as_Loutwatch_dom_ChildStreamReceiver(x$1);
     var x = this.childStream$1;
     var x$2 = ChildStreamReceiver$1.childStream$1;
-    return (x === x$2)
+    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
   } else {
     return false
   }
@@ -32207,22 +34283,6 @@ function $h_Lmonix_execution_schedulers_AsyncScheduler() {
   /*<skip>*/
 }
 $h_Lmonix_execution_schedulers_AsyncScheduler.prototype = $c_Lmonix_execution_schedulers_AsyncScheduler.prototype;
-$c_Lmonix_execution_schedulers_AsyncScheduler.prototype.scheduleOnce__J__ju_concurrent_TimeUnit__jl_Runnable__Lmonix_execution_Cancelable = (function(initialDelay, unit, r) {
-  var t = $m_ju_concurrent_TimeUnit$().MILLISECONDS$1.convert__J__ju_concurrent_TimeUnit__J(initialDelay, unit);
-  var lo = t.lo$2;
-  var hi = t.hi$2;
-  var t$1 = ((hi < 0) ? $m_sjsr_RuntimeLong$().Zero__sjsr_RuntimeLong() : new $c_sjsr_RuntimeLong().init___I__I(lo, hi));
-  var lo$1 = t$1.lo$2;
-  var hi$1 = t$1.hi$2;
-  var task = $m_Lmonix_execution_schedulers_Timer$().setTimeout__J__jl_Runnable__Lmonix_execution_UncaughtExceptionReporter__sjs_js_Dynamic(new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi$1), r, this.reporter$1);
-  $m_Lmonix_execution_Cancelable$();
-  var callback = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this, task$1) {
-    return (function() {
-      $m_Lmonix_execution_schedulers_Timer$().clearTimeout__sjs_js_Dynamic__sjs_js_Dynamic(task$1)
-    })
-  })(this, task));
-  return new $c_Lmonix_execution_Cancelable$CancelableTask().init___F0(callback)
-});
 $c_Lmonix_execution_schedulers_AsyncScheduler.prototype.reportFailure__jl_Throwable__V = (function(t) {
   this.reporter$1.reportFailure__jl_Throwable__V(t)
 });
@@ -32253,65 +34313,6 @@ var $d_Lmonix_execution_schedulers_AsyncScheduler = new $TypeData().initClass({
   Lmonix_execution_schedulers_BatchingScheduler: 1
 });
 $c_Lmonix_execution_schedulers_AsyncScheduler.prototype.$classData = $d_Lmonix_execution_schedulers_AsyncScheduler;
-/** @constructor */
-function $c_Loutwatch_dom_Prop() {
-  $c_O.call(this);
-  this.title$1 = null;
-  this.value$1 = null
-}
-$c_Loutwatch_dom_Prop.prototype = new $h_O();
-$c_Loutwatch_dom_Prop.prototype.constructor = $c_Loutwatch_dom_Prop;
-/** @constructor */
-function $h_Loutwatch_dom_Prop() {
-  /*<skip>*/
-}
-$h_Loutwatch_dom_Prop.prototype = $c_Loutwatch_dom_Prop.prototype;
-$c_Loutwatch_dom_Prop.prototype.productPrefix__T = (function() {
-  return "Prop"
-});
-$c_Loutwatch_dom_Prop.prototype.productArity__I = (function() {
-  return 2
-});
-$c_Loutwatch_dom_Prop.prototype.equals__O__Z = (function(x$1) {
-  if ((this === x$1)) {
-    return true
-  } else if ($is_Loutwatch_dom_Prop(x$1)) {
-    var Prop$1 = $as_Loutwatch_dom_Prop(x$1);
-    return ((this.title$1 === Prop$1.title$1) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.value$1, Prop$1.value$1))
-  } else {
-    return false
-  }
-});
-$c_Loutwatch_dom_Prop.prototype.productElement__I__O = (function(x$1) {
-  switch (x$1) {
-    case 0: {
-      return this.title$1;
-      break
-    }
-    case 1: {
-      return this.value$1;
-      break
-    }
-    default: {
-      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
-    }
-  }
-});
-$c_Loutwatch_dom_Prop.prototype.toString__T = (function() {
-  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Loutwatch_dom_Prop.prototype.init___T__O = (function(title, value) {
-  this.title$1 = title;
-  this.value$1 = value;
-  return this
-});
-$c_Loutwatch_dom_Prop.prototype.hashCode__I = (function() {
-  var this$2 = $m_s_util_hashing_MurmurHash3$();
-  return this$2.productHash__s_Product__I__I(this, (-889275714))
-});
-$c_Loutwatch_dom_Prop.prototype.productIterator__sc_Iterator = (function() {
-  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
-});
 function $is_Loutwatch_dom_Prop(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_dom_Prop)))
 }
@@ -32324,21 +34325,6 @@ function $isArrayOf_Loutwatch_dom_Prop(obj, depth) {
 function $asArrayOf_Loutwatch_dom_Prop(obj, depth) {
   return (($isArrayOf_Loutwatch_dom_Prop(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.dom.Prop;", depth))
 }
-var $d_Loutwatch_dom_Prop = new $TypeData().initClass({
-  Loutwatch_dom_Prop: 0
-}, false, "outwatch.dom.Prop", {
-  Loutwatch_dom_Prop: 1,
-  O: 1,
-  Loutwatch_dom_TitledAttribute: 1,
-  Loutwatch_dom_Attribute: 1,
-  Loutwatch_dom_Property: 1,
-  Loutwatch_dom_VDomModifier$und: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Loutwatch_dom_Prop.prototype.$classData = $d_Loutwatch_dom_Prop;
 /** @constructor */
 function $c_s_reflect_ManifestFactory$BooleanManifest$() {
   $c_s_reflect_AnyValManifest.call(this)
@@ -33321,6 +35307,65 @@ var $d_Loutwatch_dom_BasicAttr = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Loutwatch_dom_BasicAttr.prototype.$classData = $d_Loutwatch_dom_BasicAttr;
+/** @constructor */
+function $c_Loutwatch_dom_BasicStyle() {
+  $c_O.call(this);
+  this.title$1 = null;
+  this.value$1 = null
+}
+$c_Loutwatch_dom_BasicStyle.prototype = new $h_O();
+$c_Loutwatch_dom_BasicStyle.prototype.constructor = $c_Loutwatch_dom_BasicStyle;
+/** @constructor */
+function $h_Loutwatch_dom_BasicStyle() {
+  /*<skip>*/
+}
+$h_Loutwatch_dom_BasicStyle.prototype = $c_Loutwatch_dom_BasicStyle.prototype;
+$c_Loutwatch_dom_BasicStyle.prototype.init___T__T = (function(title, value) {
+  this.title$1 = title;
+  this.value$1 = value;
+  return this
+});
+$c_Loutwatch_dom_BasicStyle.prototype.productPrefix__T = (function() {
+  return "BasicStyle"
+});
+$c_Loutwatch_dom_BasicStyle.prototype.productArity__I = (function() {
+  return 2
+});
+$c_Loutwatch_dom_BasicStyle.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Loutwatch_dom_BasicStyle(x$1)) {
+    var BasicStyle$1 = $as_Loutwatch_dom_BasicStyle(x$1);
+    return ((this.title$1 === BasicStyle$1.title$1) && (this.value$1 === BasicStyle$1.value$1))
+  } else {
+    return false
+  }
+});
+$c_Loutwatch_dom_BasicStyle.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.title$1;
+      break
+    }
+    case 1: {
+      return this.value$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Loutwatch_dom_BasicStyle.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Loutwatch_dom_BasicStyle.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Loutwatch_dom_BasicStyle.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
 function $is_Loutwatch_dom_BasicStyle(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_dom_BasicStyle)))
 }
@@ -33333,6 +35378,22 @@ function $isArrayOf_Loutwatch_dom_BasicStyle(obj, depth) {
 function $asArrayOf_Loutwatch_dom_BasicStyle(obj, depth) {
   return (($isArrayOf_Loutwatch_dom_BasicStyle(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Loutwatch.dom.BasicStyle;", depth))
 }
+var $d_Loutwatch_dom_BasicStyle = new $TypeData().initClass({
+  Loutwatch_dom_BasicStyle: 0
+}, false, "outwatch.dom.BasicStyle", {
+  Loutwatch_dom_BasicStyle: 1,
+  O: 1,
+  Loutwatch_dom_Style: 1,
+  Loutwatch_dom_TitledAttribute: 1,
+  Loutwatch_dom_Attribute: 1,
+  Loutwatch_dom_Property: 1,
+  Loutwatch_dom_VDomModifier$und: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Loutwatch_dom_BasicStyle.prototype.$classData = $d_Loutwatch_dom_BasicStyle;
 function $is_Loutwatch_dom_DelayedStyle(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Loutwatch_dom_DelayedStyle)))
 }
@@ -39360,22 +41421,22 @@ $c_sci_HashSet$HashSet1.prototype.updated0__O__I__I__sci_HashSet = (function(key
     return new $c_sci_HashSet$HashSetCollision1().init___I__sci_ListSet(hash, new $c_sci_ListSet$Node().init___sci_ListSet__O(this$2, elem).$$plus__O__sci_ListSet(key))
   }
 });
-$c_sci_HashSet$HashSet1.prototype.foreach__F1__V = (function(f) {
-  f.apply__O__O(this.key$6)
-});
 $c_sci_HashSet$HashSet1.prototype.init___O__I = (function(key, hash) {
   this.key$6 = key;
   this.hash$6 = hash;
   return this
 });
-$c_sci_HashSet$HashSet1.prototype.size__I = (function() {
-  return 1
+$c_sci_HashSet$HashSet1.prototype.foreach__F1__V = (function(f) {
+  f.apply__O__O(this.key$6)
 });
 $c_sci_HashSet$HashSet1.prototype.iterator__sc_Iterator = (function() {
   $m_sc_Iterator$();
   var array = [this.key$6];
   var elems = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
   return new $c_sc_IndexedSeqLike$Elements().init___sc_IndexedSeqLike__I__I(elems, 0, $uI(elems.array$6.length))
+});
+$c_sci_HashSet$HashSet1.prototype.size__I = (function() {
+  return 1
 });
 $c_sci_HashSet$HashSet1.prototype.removed0__O__I__I__sci_HashSet = (function(key, hash, level) {
   return (((hash === this.hash$6) && $m_sr_BoxesRunTime$().equals__O__O__Z(key, this.key$6)) ? null : this)
@@ -43821,18 +45882,6 @@ function $h_Loutwatch_dom_dsl$() {
   /*<skip>*/
 }
 $h_Loutwatch_dom_dsl$.prototype = $c_Loutwatch_dom_dsl$.prototype;
-$c_Loutwatch_dom_dsl$.prototype.child$lzycompute__p1__Loutwatch_dom_helpers_ChildStreamReceiverBuilder$ = (function() {
-  var b = this.bitmap$2$1;
-  var hi = (256 & b.hi$2);
-  if ((hi === 0)) {
-    this.child$1 = $m_Loutwatch_dom_helpers_ChildStreamReceiverBuilder$();
-    var b$1 = this.bitmap$2$1;
-    var lo = b$1.lo$2;
-    var hi$1 = (256 | b$1.hi$2);
-    this.bitmap$2$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
-  };
-  return this.child$1
-});
 $c_Loutwatch_dom_dsl$.prototype.h1$lzycompute__p1__Lcats_effect_IO = (function() {
   var b = this.bitmap$1$1;
   var lo = (67108864 & b.lo$2);
@@ -43845,30 +45894,32 @@ $c_Loutwatch_dom_dsl$.prototype.h1$lzycompute__p1__Lcats_effect_IO = (function()
   };
   return this.h1$1
 });
+$c_Loutwatch_dom_dsl$.prototype.child$lzycompute__p1__Loutwatch_dom_helpers_ChildStreamReceiverBuilder$ = (function() {
+  var b = this.bitmap$2$1;
+  var hi = (256 & b.hi$2);
+  if ((hi === 0)) {
+    this.child$1 = $m_Loutwatch_dom_helpers_ChildStreamReceiverBuilder$();
+    var b$1 = this.bitmap$2$1;
+    var lo = b$1.lo$2;
+    var hi$1 = (256 | b$1.hi$2);
+    this.bitmap$2$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
+  };
+  return this.child$1
+});
+$c_Loutwatch_dom_dsl$.prototype.button$lzycompute__p1__Lcats_effect_IO = (function() {
+  var b = this.bitmap$1$1;
+  var hi = (32 & b.hi$2);
+  if ((hi === 0)) {
+    this.button$1 = $f_Loutwatch_dom_DomTypesBuilder$VNodeBuilder__tag__T__Z__Lcats_effect_IO(this, "button", false);
+    var b$1 = this.bitmap$1$1;
+    var lo = b$1.lo$2;
+    var hi$1 = (32 | b$1.hi$2);
+    this.bitmap$1$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
+  };
+  return this.button$1
+});
 $c_Loutwatch_dom_dsl$.prototype.init___ = (function() {
   return this
-});
-$c_Loutwatch_dom_dsl$.prototype.tpe__Loutwatch_dom_helpers_AttributeBuilder = (function() {
-  var b = this.bitmap$4$1;
-  var hi = (4194304 & b.hi$2);
-  if ((hi === 0)) {
-    return this.tpe$lzycompute__p1__Loutwatch_dom_helpers_AttributeBuilder()
-  } else {
-    return this.tpe$1
-  }
-});
-$c_Loutwatch_dom_dsl$.prototype.value$lzycompute__p1__Loutwatch_dom_helpers_PropertyBuilder = (function() {
-  var b = this.bitmap$3$1;
-  var hi = (16384 & b.hi$2);
-  if ((hi === 0)) {
-    var codec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
-    this.value$1 = $f_Loutwatch_dom_Props__prop__T__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_PropertyBuilder(this, "value", codec);
-    var b$1 = this.bitmap$3$1;
-    var lo = b$1.lo$2;
-    var hi$1 = (16384 | b$1.hi$2);
-    this.bitmap$3$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
-  };
-  return this.value$1
 });
 $c_Loutwatch_dom_dsl$.prototype.table$lzycompute__p1__Lcats_effect_IO = (function() {
   var b = this.bitmap$1$1;
@@ -43881,6 +45932,48 @@ $c_Loutwatch_dom_dsl$.prototype.table$lzycompute__p1__Lcats_effect_IO = (functio
     this.bitmap$1$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
   };
   return this.table$1
+});
+$c_Loutwatch_dom_dsl$.prototype.h2$lzycompute__p1__Lcats_effect_IO = (function() {
+  var b = this.bitmap$1$1;
+  var lo = (134217728 & b.lo$2);
+  if ((lo === 0)) {
+    this.h2$1 = $f_Loutwatch_dom_DomTypesBuilder$VNodeBuilder__tag__T__Z__Lcats_effect_IO(this, "h2", false);
+    var b$1 = this.bitmap$1$1;
+    var lo$1 = (134217728 | b$1.lo$2);
+    var hi = b$1.hi$2;
+    this.bitmap$1$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
+  };
+  return this.h2$1
+});
+$c_Loutwatch_dom_dsl$.prototype.img__Lcats_effect_IO = (function() {
+  var b = this.bitmap$2$1;
+  var lo = (256 & b.lo$2);
+  if ((lo === 0)) {
+    return this.img$lzycompute__p1__Lcats_effect_IO()
+  } else {
+    return this.img$1
+  }
+});
+$c_Loutwatch_dom_dsl$.prototype.button__Lcats_effect_IO = (function() {
+  var b = this.bitmap$1$1;
+  var hi = (32 & b.hi$2);
+  if ((hi === 0)) {
+    return this.button$lzycompute__p1__Lcats_effect_IO()
+  } else {
+    return this.button$1
+  }
+});
+$c_Loutwatch_dom_dsl$.prototype.a$lzycompute__p1__Lcats_effect_IO = (function() {
+  var b = this.bitmap$1$1;
+  var hi = (2048 & b.hi$2);
+  if ((hi === 0)) {
+    this.a$1 = $f_Loutwatch_dom_DomTypesBuilder$VNodeBuilder__tag__T__Z__Lcats_effect_IO(this, "a", false);
+    var b$1 = this.bitmap$1$1;
+    var lo = b$1.lo$2;
+    var hi$1 = (2048 | b$1.hi$2);
+    this.bitmap$1$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
+  };
+  return this.a$1
 });
 $c_Loutwatch_dom_dsl$.prototype.tr$lzycompute__p1__Lcats_effect_IO = (function() {
   var b = this.bitmap$1$1;
@@ -43912,26 +46005,60 @@ $c_Loutwatch_dom_dsl$.prototype.td__Lcats_effect_IO = (function() {
     return this.td$1
   }
 });
-$c_Loutwatch_dom_dsl$.prototype.type__Loutwatch_dom_helpers_AttributeBuilder = (function() {
+$c_Loutwatch_dom_dsl$.prototype.rel$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder = (function() {
   var b = this.bitmap$4$1;
+  var lo = (134217728 & b.lo$2);
+  if ((lo === 0)) {
+    var attrCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    var propCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    this.rel$1 = $f_Loutwatch_dom_ReflectedAttrs__reflectedAttr__T__T__Lcom_raquo_domtypes_generic_codecs_Codec__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_AttributeBuilder(this, "rel", "rel", attrCodec, propCodec);
+    var b$1 = this.bitmap$4$1;
+    var lo$1 = (134217728 | b$1.lo$2);
+    var hi = b$1.hi$2;
+    this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
+  };
+  return this.rel$1
+});
+$c_Loutwatch_dom_dsl$.prototype.width__Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle = (function() {
+  var b = this.bitmap$0$1;
   var hi = (1048576 & b.hi$2);
   if ((hi === 0)) {
-    return this.type$lzycompute__p1__Loutwatch_dom_helpers_AttributeBuilder()
+    return this.width$lzycompute__p1__Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle()
   } else {
-    return this.type$1
+    return this.width$1
   }
 });
-$c_Loutwatch_dom_dsl$.prototype.input$lzycompute__p1__Lcats_effect_IO = (function() {
-  var b = this.bitmap$1$1;
-  var hi = (16 & b.hi$2);
+$c_Loutwatch_dom_dsl$.prototype.target__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var hi = (32 & b.hi$2);
   if ((hi === 0)) {
-    this.input$1 = $f_Loutwatch_dom_DomTypesBuilder$VNodeBuilder__tag__T__Z__Lcats_effect_IO(this, "input", true);
-    var b$1 = this.bitmap$1$1;
+    return this.target$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder()
+  } else {
+    return this.target$1
+  }
+});
+$c_Loutwatch_dom_dsl$.prototype.target$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var hi = (32 & b.hi$2);
+  if ((hi === 0)) {
+    var attrCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    var propCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    this.target$1 = $f_Loutwatch_dom_ReflectedAttrs__reflectedAttr__T__T__Lcom_raquo_domtypes_generic_codecs_Codec__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_AttributeBuilder(this, "target", "target", attrCodec, propCodec);
+    var b$1 = this.bitmap$4$1;
     var lo = b$1.lo$2;
-    var hi$1 = (16 | b$1.hi$2);
-    this.bitmap$1$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
+    var hi$1 = (32 | b$1.hi$2);
+    this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
   };
-  return this.input$1
+  return this.target$1
+});
+$c_Loutwatch_dom_dsl$.prototype.href__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var lo = (2048 & b.lo$2);
+  if ((lo === 0)) {
+    return this.href$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder()
+  } else {
+    return this.href$1
+  }
 });
 $c_Loutwatch_dom_dsl$.prototype.hidden$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder = (function() {
   var b = this.bitmap$4$1;
@@ -43965,39 +46092,61 @@ $c_Loutwatch_dom_dsl$.prototype.h1__Lcats_effect_IO = (function() {
     return this.h1$1
   }
 });
-$c_Loutwatch_dom_dsl$.prototype.value__Loutwatch_dom_helpers_PropertyBuilder = (function() {
-  var b = this.bitmap$3$1;
-  var hi = (16384 & b.hi$2);
+$c_Loutwatch_dom_dsl$.prototype.onClick$lzycompute__p1__F1 = (function() {
+  var b = this.bitmap$2$1;
+  var hi = (65536 & b.hi$2);
   if ((hi === 0)) {
-    return this.value$lzycompute__p1__Loutwatch_dom_helpers_PropertyBuilder()
+    this.onClick$1 = $as_Loutwatch_dom_helpers_SimpleEmitterBuilder(this.eventProp__T__O("click")).create$1;
+    var b$1 = this.bitmap$2$1;
+    var lo = b$1.lo$2;
+    var hi$1 = (65536 | b$1.hi$2);
+    this.bitmap$2$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
+  };
+  return this.onClick$1
+});
+$c_Loutwatch_dom_dsl$.prototype.src__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var hi = (8 & b.hi$2);
+  if ((hi === 0)) {
+    return this.src$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder()
   } else {
-    return this.value$1
+    return this.src$1
   }
 });
-$c_Loutwatch_dom_dsl$.prototype.tpe$lzycompute__p1__Loutwatch_dom_helpers_AttributeBuilder = (function() {
-  var b = this.bitmap$4$1;
-  var hi = (4194304 & b.hi$2);
+$c_Loutwatch_dom_dsl$.prototype.a__Lcats_effect_IO = (function() {
+  var b = this.bitmap$1$1;
+  var hi = (2048 & b.hi$2);
   if ((hi === 0)) {
-    this.tpe$1 = this.type__Loutwatch_dom_helpers_AttributeBuilder();
-    var b$1 = this.bitmap$4$1;
-    var lo = b$1.lo$2;
-    var hi$1 = (4194304 | b$1.hi$2);
-    this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
-  };
-  return this.tpe$1
+    return this.a$lzycompute__p1__Lcats_effect_IO()
+  } else {
+    return this.a$1
+  }
 });
-$c_Loutwatch_dom_dsl$.prototype.type$lzycompute__p1__Loutwatch_dom_helpers_AttributeBuilder = (function() {
-  var b = this.bitmap$4$1;
+$c_Loutwatch_dom_dsl$.prototype.width$lzycompute__p1__Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle = (function() {
+  var b = this.bitmap$0$1;
   var hi = (1048576 & b.hi$2);
   if ((hi === 0)) {
-    var codec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
-    this.type$1 = $f_Loutwatch_dom_Attrs__attr__T__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_AttributeBuilder(this, "type", codec);
-    var b$1 = this.bitmap$4$1;
+    this.width$1 = new $c_Lcom_raquo_domtypes_generic_defs_styles_StylesMisc$AutoStyle().init___Lcom_raquo_domtypes_generic_defs_styles_StylesMisc__T__T(this, "width", "width");
+    var b$1 = this.bitmap$0$1;
     var lo = b$1.lo$2;
     var hi$1 = (1048576 | b$1.hi$2);
-    this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
+    this.bitmap$0$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
   };
-  return this.type$1
+  return this.width$1
+});
+$c_Loutwatch_dom_dsl$.prototype.id$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var lo = (8192 & b.lo$2);
+  if ((lo === 0)) {
+    var attrCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    var propCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    this.id$1 = $f_Loutwatch_dom_ReflectedAttrs__reflectedAttr__T__T__Lcom_raquo_domtypes_generic_codecs_Codec__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_AttributeBuilder(this, "id", "id", attrCodec, propCodec);
+    var b$1 = this.bitmap$4$1;
+    var lo$1 = (8192 | b$1.lo$2);
+    var hi = b$1.hi$2;
+    this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
+  };
+  return this.id$1
 });
 $c_Loutwatch_dom_dsl$.prototype.hidden__Loutwatch_dom_helpers_ValueBuilder = (function() {
   var b = this.bitmap$4$1;
@@ -44007,6 +46156,20 @@ $c_Loutwatch_dom_dsl$.prototype.hidden__Loutwatch_dom_helpers_ValueBuilder = (fu
   } else {
     return this.hidden$1
   }
+});
+$c_Loutwatch_dom_dsl$.prototype.src$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var hi = (8 & b.hi$2);
+  if ((hi === 0)) {
+    var attrCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    var propCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    this.src$1 = $f_Loutwatch_dom_ReflectedAttrs__reflectedAttr__T__T__Lcom_raquo_domtypes_generic_codecs_Codec__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_AttributeBuilder(this, "src", "src", attrCodec, propCodec);
+    var b$1 = this.bitmap$4$1;
+    var lo = b$1.lo$2;
+    var hi$1 = (8 | b$1.hi$2);
+    this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
+  };
+  return this.src$1
 });
 $c_Loutwatch_dom_dsl$.prototype.div$lzycompute__p1__Lcats_effect_IO = (function() {
   var b = this.bitmap$2$1;
@@ -44020,14 +46183,28 @@ $c_Loutwatch_dom_dsl$.prototype.div$lzycompute__p1__Lcats_effect_IO = (function(
   };
   return this.div$1
 });
-$c_Loutwatch_dom_dsl$.prototype.input__Lcats_effect_IO = (function() {
-  var b = this.bitmap$1$1;
-  var hi = (16 & b.hi$2);
-  if ((hi === 0)) {
-    return this.input$lzycompute__p1__Lcats_effect_IO()
+$c_Loutwatch_dom_dsl$.prototype.id__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var lo = (8192 & b.lo$2);
+  if ((lo === 0)) {
+    return this.id$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder()
   } else {
-    return this.input$1
+    return this.id$1
   }
+});
+$c_Loutwatch_dom_dsl$.prototype.href$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var lo = (2048 & b.lo$2);
+  if ((lo === 0)) {
+    var attrCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    var propCodec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    this.href$1 = $f_Loutwatch_dom_ReflectedAttrs__reflectedAttr__T__T__Lcom_raquo_domtypes_generic_codecs_Codec__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_AttributeBuilder(this, "href", "href", attrCodec, propCodec);
+    var b$1 = this.bitmap$4$1;
+    var lo$1 = (2048 | b$1.lo$2);
+    var hi = b$1.hi$2;
+    this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
+  };
+  return this.href$1
 });
 $c_Loutwatch_dom_dsl$.prototype.table__Lcats_effect_IO = (function() {
   var b = this.bitmap$1$1;
@@ -44037,6 +46214,9 @@ $c_Loutwatch_dom_dsl$.prototype.table__Lcats_effect_IO = (function() {
   } else {
     return this.table$1
   }
+});
+$c_Loutwatch_dom_dsl$.prototype.eventProp__T__O = (function(key) {
+  return new $c_Loutwatch_dom_helpers_SimpleEmitterBuilder().init___F1($m_Loutwatch_dom_helpers_EmitterBuilder$().apply__T__F1(key))
 });
 $c_Loutwatch_dom_dsl$.prototype.p$lzycompute__p1__Lcats_effect_IO = (function() {
   var b = this.bitmap$1$1;
@@ -44049,6 +46229,67 @@ $c_Loutwatch_dom_dsl$.prototype.p$lzycompute__p1__Lcats_effect_IO = (function() 
     this.bitmap$1$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
   };
   return this.p$1
+});
+$c_Loutwatch_dom_dsl$.prototype.h2__Lcats_effect_IO = (function() {
+  var b = this.bitmap$1$1;
+  var lo = (134217728 & b.lo$2);
+  if ((lo === 0)) {
+    return this.h2$lzycompute__p1__Lcats_effect_IO()
+  } else {
+    return this.h2$1
+  }
+});
+$c_Loutwatch_dom_dsl$.prototype.img$lzycompute__p1__Lcats_effect_IO = (function() {
+  var b = this.bitmap$2$1;
+  var lo = (256 & b.lo$2);
+  if ((lo === 0)) {
+    this.img$1 = $f_Loutwatch_dom_DomTypesBuilder$VNodeBuilder__tag__T__Z__Lcats_effect_IO(this, "img", true);
+    var b$1 = this.bitmap$2$1;
+    var lo$1 = (256 | b$1.lo$2);
+    var hi = b$1.hi$2;
+    this.bitmap$2$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
+  };
+  return this.img$1
+});
+$c_Loutwatch_dom_dsl$.prototype.onClick__F1 = (function() {
+  var b = this.bitmap$2$1;
+  var hi = (65536 & b.hi$2);
+  if ((hi === 0)) {
+    return this.onClick$lzycompute__p1__F1()
+  } else {
+    return this.onClick$1
+  }
+});
+$c_Loutwatch_dom_dsl$.prototype.rel__Loutwatch_dom_helpers_ValueBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var lo = (134217728 & b.lo$2);
+  if ((lo === 0)) {
+    return this.rel$lzycompute__p1__Loutwatch_dom_helpers_ValueBuilder()
+  } else {
+    return this.rel$1
+  }
+});
+$c_Loutwatch_dom_dsl$.prototype.styleAttr$lzycompute__p1__Loutwatch_dom_helpers_AttributeBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var hi = (524288 & b.hi$2);
+  if ((hi === 0)) {
+    var codec = $m_Lcom_raquo_domtypes_generic_codecs_package$StringAsIsCodec$();
+    this.styleAttr$1 = $f_Loutwatch_dom_Attrs__attr__T__Lcom_raquo_domtypes_generic_codecs_Codec__Loutwatch_dom_helpers_AttributeBuilder(this, "style", codec);
+    var b$1 = this.bitmap$4$1;
+    var lo = b$1.lo$2;
+    var hi$1 = (524288 | b$1.hi$2);
+    this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo, hi$1)
+  };
+  return this.styleAttr$1
+});
+$c_Loutwatch_dom_dsl$.prototype.styleAttr__Loutwatch_dom_helpers_AttributeBuilder = (function() {
+  var b = this.bitmap$4$1;
+  var hi = (524288 & b.hi$2);
+  if ((hi === 0)) {
+    return this.styleAttr$lzycompute__p1__Loutwatch_dom_helpers_AttributeBuilder()
+  } else {
+    return this.styleAttr$1
+  }
 });
 $c_Loutwatch_dom_dsl$.prototype.td$lzycompute__p1__Lcats_effect_IO = (function() {
   var b = this.bitmap$1$1;
@@ -45730,6 +47971,10 @@ $c_scm_ListBuffer.prototype.$$plus$eq__O__scm_Builder = (function(elem) {
 });
 $c_scm_ListBuffer.prototype.sizeHint__I__V = (function(size) {
   /*<skip>*/
+});
+$c_scm_ListBuffer.prototype.copyToArray__O__I__I__V = (function(xs, start, len) {
+  var this$1 = this.scala$collection$mutable$ListBuffer$$start$6;
+  $f_sc_IterableLike__copyToArray__O__I__I__V(this$1, xs, start, len)
 });
 $c_scm_ListBuffer.prototype.$$plus$eq$colon__O__scm_ListBuffer = (function(x) {
   if (this.exported$6) {
